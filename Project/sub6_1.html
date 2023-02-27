@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <!--1. 문자해독 다국어 지원코드(유니코드)-->
+        <meta charset="utf-8">
+
+        <!--2. 문서의 유형(doctyp html)선언과 함께 호환돠는 브라우저의 호환 모드로써
+            과거 IE버전은 최신 edge 브라우저에 맞춰 호환될 수 있도록 렌더링(현재IE서비스 중단,삭제)-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!--3. 검색엔진에 검색되는 검색키워드-->
+        <meta name="keywords" content="스마트 웹 콘텐츠 UI/UX디자인 & 구현,가상리뉴얼 프로젝트">
+
+        <!--4. 검색엔진에 소개되는 사이트 설명-->
+        <meta name="description" content="업데이트 시기에 맞춰 특정 사이트 가상리뉴얼 프로젝트 진행">
+        
+       
+        <!--4.2. 반응형웹(모바일)필수코드  ★★★★★
+                meta name="viewpoint" 최초html,css문서를 해독하는 출력화면 관련 설명
+                 initial-scale=1,
+                 minimum-scale=1,
+                 maximum-scale=1       최초html,css문서를 해독하는 출력화면에 맞춰 최소,최대 1배율을 유지
+                 user-scalable=no      모바일 환경에서 화면 확대,축소 기능을 사용하지 않겠다.
+        -->
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+
+
+        <!--5. 브라우저 상단탭에 출력될 사이트 타이틀-->
+        <title>문화재청 경복궁</title>
+
+        <!--6. 외부 CSS연동-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/sub_style.css">
+
+
+
+        <!--6.2.파비콘(브라우저 상단탭 타이틀 앞에 적용되는 아이콘)
+        파비콘이란 웹사이트 또는 웹 페이지를 대표하기 위해 웹 브라우저에서 사용되는 16x16 픽셀의 작은 이미지입니다.
+        즐겨찾기 아이콘(favorite icon)의 줄임말로 주로 웹 브라우저 상단에 있는 탭에 표시됩니다.
+
+        ICO
+        Microsoft에서 개발한 파일 형식인 ICO는 파비콘의 기존 파일 형식이었습니다.
+        ICO는 모든 브라우저에서 지원하며 파일 하나가 여러 가지 크기의 이미지를 포함할 수 있습니다.
+
+        PNG: PNG는 웹사이트 제작자들에게 아주 익숙한 파일 형식이기 때문에 파비콘의 파일 형식으로 자주 사용됩니다.
+        만들기 쉬운 파일 형식이며, 일반적으로 이미지 및 파비콘을 고화질로 전송합니다.
+        PNG 파일은 가볍다는 이점 또한 가지고 있는데요. 이는 파일들이 빠르게 로드된다는 것을 의미합니다.
+
+
+        SVG
+        SVG 파일은 가볍기로 유명합니다.
+        사이트의 성능을 저하시키지 않으면서 고화질 이미지를 전송할 수 있습니다.
+        과거에는 브라우저 호환성 문제로 파비콘의 SVG 사용이 제한되었지만 점점 변화되고 있습니다.
+        ※https://www.adobe.com/kr/creativecloud/file-types/image/vector/svg-file.html
+        -->
+        <link rel="shortcut icon" href="images/test.png">
+
+        <!--7. 외부js(jQuery)압축파일 연동CDN-->
+        <script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
+        <script src="js/motion.js"></script>
+    </head>
+
+    <body>
+        <!--1. 전체 헤더(검정배경)-->
+        <header id="header">
+
+            <!--2. 전체 헤더(하얀색 배경)-->
+            <div class="header_wrap">
+
+                <!--3. 전체 헤더(가운데 정렬)-->
+                <div class="header_inner">
+
+                    <h1><a href="index.html"><img src="images/logo_img.png" alt="경복궁"></a></h1>
+                    <p class="nav_open_btn"><button><img src="images/nav_open_btn.png" alt="메뉴열람"></button></p>
+                    <nav>
+                        <p class="nav_close_btn"><button><img src="images/nav_close_btn.png" alt="메뉴닫힘"></button></p>
+                        <ul class="gnb">
+                            <li>
+                                <h2><a href="sub1_1.html">관람안내</a></h2>
+                                <ul>
+                                    <li><a href="sub1_1.html">관람시간 및 규정</a></li>
+                                    <li><a href="sub1_2.html">관람시간 및 요금</a></li>
+                                    <li><a href="sub1_3.html">해설안내</a></li>
+                                    <li><a href="sub1_4.html">오시는 길</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub2_1.html">관람예약/신청</a></h2>
+                                <ul>
+                                    <li><a href="sub2_1.html">경회루 특별관람 예약</a></li>
+                                    <li><a href="sub2_2.html">칠궁 단체해설 예약</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub3_1.html">참여마당</a></h2>
+                                <ul>
+                                    <li><a href="sub3_1.html">자주하는 질문</a></li>
+                                    <li><a href="https://www.cha.go.kr/html/HtmlPage.do?pg=/minwon/minwon_guide.jsp&mn=NS_02_01_01" target="_blank">민원신청</a></li>                                    
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub4_1.html">행사</a></h2>
+                                <ul>
+                                    <li><a href="sub4_1.html">수문장교대의식</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub5_1.html">자료마당</a></h2>
+                                <ul>
+                                    <li><a href="sub5_1.html">경복궁의 역사</a></li>
+                                    <li><a href="sub5_2.html">경복궁 들여다보기</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub6_1.html">미리보는 경복궁</a></h2>
+                                <ul>
+                                    <li><a href="sub6_1.html">경복궁의 사계</a></li>
+                                </ul>
+                            </li> 
+                        </ul>
+                        
+                    </nav>
+
+                </div>
+            </div>
+        </header>
+
+        <section id="sub_container">
+            <div class="sub_container_wrap">
+
+                <!--서브 공통 비주얼-->
+                <div class="sub_visual sub6_bg">
+
+                    <div class="sub_visual_wrap"> 
+                        <h2>미리보는 경복궁</h2> 
+                    </div>
+                </div>
+
+                <!--서브 공통 lnb-->
+                <div class="sub_lnb">
+                    <ul>
+                        <li><a href="sub6_1.html" class="sub_lnb_select">경복궁의 사계</a></li>
+                    </ul>
+                </div>
+
+                <!--서브 공통 h3-->
+                <h3>경복궁의 사계</h3>
+
+                <!--서브 공통 p(간단한 소개글)-->
+                <p>봄, 여름, 가을 그리고 겨울, 사계절의 아름다움이 스며들어 있는<br>
+                    경복궁의 사계를 감상해보세요.</p>
+
+                <!--서브 개별-->
+                <div class="sub6_1">
+                    
+                    <ul>
+                        <li class="spring">
+                            <div class="spring_wrap">
+                                <h4>봄</h4>
+                                <ul>
+                                    <li>
+                                        <img src="images/spring_img1.png" alt="진달래 꽃이 만개하여 봄을 알리는 건청궁의 마당">
+                                        <p><strong>건청궁</strong></p>
+                                        <p>신문물을 수용하여 근대화를 도모한 산실의 주요전각입니다</p>
+                                    </li>
+
+                                    <li>
+                                        <img src="images/spring_img2.png" alt="봄을 알리는 개나리가 진 함화당 주변에 만개한 모습">
+                                        <p><strong>함화당</strong></p>
+                                        <p>후궁과 궁녀들이 기거하던 곳의 주요전각입니다.</p>
+                                    </li>
+
+                                    <li>
+                                        <img src="images/spring_img3.png" alt="분홍빛 벚꽃이 흩날리는 자경전의 전경">
+                                        <p><strong>자경전</strong></p>
+                                        <p>임금이 침전으로 쓰던 건물의 주요전각입니다.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="summer"> 
+                            <div class="summer_wrap">
+                                <h4>여름</h4>
+                                <ul>
+                                    <li>
+                                        <img src="images/summer_img1.png" alt="오방색의 화려함을 보여주는 강녕전의 모습">
+                                        <p><strong>강녕전</strong></p>
+                                        <p>왕이 일상을 보내는 거쳐였으며 침전으로 사용한 주요전각입니다.</p>
+                                    </li>
+
+                                    <li>
+                                        <img src="images/summer_img2.png" alt="푸른하늘 따뜻한 햇살아래 웅장함을 느낄 수 있는 영제교 전경">
+                                        <p><strong>영제교</strong></p>
+                                        <p>광화문을 지나 흥례문과 근정문 사이에 있는 다리로 근정전으로 들어가기<br> 위해 건너야하는 다리입니다.</p>
+                                    </li>
+
+                                    <li>
+                                        <img src="images/summer_img3.png" alt="초록이 무성한 마당에서 보이는 집옥채">
+                                        <p><strong>집옥채</strong></p>
+                                        <p>조선 고종이 서재로 사용하던 주요전각입니다.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="fall">
+                            <div class="fall_wrap">
+                                <h4>가을</h4>
+                                <ul>
+                                    <li>
+                                        <img src="images/fall_img1.png" alt="가을 단풍이 경복궁의 북문의 돌담 옆에 핀 전경">
+                                        <p><strong>신무문</strong></p>
+                                        <p>경복궁의 북문의 주요전각입니다.</p>
+                                    </li>
+
+                                    <li>
+                                        <img src="images/fall_img2.png" alt="초가을 모습의 숙문당">
+                                        <p><strong>숙문당</strong></p>
+                                        <p>임금과 신하들과 경연을 열어 정사와 학문을 논하던 곳의 주요전각입니다.</p>
+                                    </li>
+
+                                    <li>
+                                        <img src="images/fall_img3.png" alt="겨울이 오기전 따스한 햇빛의 안락함이 느껴지는 복수당">
+                                        <p><strong>복수당</strong></p>
+                                        <p>왕가의 안녕과 복락을 기원하는 전각입니다.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+ 
+                        <li class="winter">
+                            <div class="winter_wrap">
+                                <h4>겨울</h4>
+                                <ul>
+                                    <li>
+                                        <img src="images/winter_img1.png" alt="눈이 소복이 쌓인 강녕전">
+                                        <p><strong>강녕전</strong></p>
+                                        <p>왕이 일상을 보내는 거쳐였으며 침전으로 사용한 주요 전각입니다.</p>
+                                    </li>
+
+                                    <li>
+                                        <img src="images/winter_img2.png" alt="함박눈이 내린 후 온통 하얀 눈으로 뒤덮힌 근정전"> 
+                                        <p><strong>근정전</strong></p>
+                                        <p>조선시대에 임금의 즉위식이나 대례 따위를 거행하던 주요 전각입니다.</p>
+                                    </li>
+
+                                    <li>
+                                        <img src="images/winter_img3.png" alt="눈이 한층 두텁게 쌓인 나무가짓 사이로 보여지는 하얀 눈으로 덮인 경회루">
+                                        <p><strong>경회루</strong></p>
+                                        <p>나라에 경사가 있거나 사신이 왔을 때 연회를 베풀던 주요 전각입니다.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="footer_wrap">
+
+                <div>
+                    <ul>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">저작권정책</a></li>
+                        <li><a href="#">개인정보침해신고센터</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="#"><img src="images/sns_img1.png" alt="유튜브 바로가기"></a></li>
+                        <li><a href="#"><img src="images/sns_img2.png" alt="페이스북 바로가기"></a></li>
+                        <li><a href="#"><img src="images/sns_img3.png" alt="인스타 바로가기"></a></li>
+                    </ul>
+
+                    <p><img src="images/logo_img.png" alt="경복궁"></p>
+                </div>
+                   
+                <div>
+                    <p>서울특별시 종로구 사직로 161<br></p>
+                    <p>전화번호02-3700-3900  팩스02-3700-3909</p>
+                    <p>COPYR IGHT 2023 BY GYEONGBOKGUNG. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

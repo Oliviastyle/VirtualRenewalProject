@@ -1,0 +1,536 @@
+@charset "utf-8";
+/*
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+*/
+*{ font-size: 16px;} 
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd{ margin:0; padding:0;}
+table{ border-collapse: collapse; }
+a{ text-decoration: none; color:#000; }
+li{  list-style: none;} 
+button{ border:0; background: none; cursor:pointer;}
+strong{font-family: 'Nanum Myeongjo', serif;}
+
+/*모바일(599px)***************************************/
+
+/* 1. nav 영역 모든 li 다들어오게 2. nav */
+
+@media screen and (max-width:599px) {
+   
+    #header{  position: fixed; z-index: 1; left: 0 ; top:0;  width:100%; background-color: #000;  overflow: hidden; box-shadow: 0 3px 5px rgba(0,0,0,0.2); }
+    .header_wrap{ height:100px; background-color: #fff; }
+    .header_inner{ display: flex; justify-content: space-between;}
+    h1{ margin:30px 0 0 10px; }
+    .nav_open_btn{ margin: 35px 10px 0 0;}
+    nav{position: fixed; left:0; top:0; width:100%; height:100%; background: #000; margin-left:100%; }
+    .nav_close_btn{ text-align: right;}
+    .nav_close_btn button{ margin:20px 10px 0 0; }
+    .nav_close_btn button:hover{ opacity: 0.5; }
+    .header_inner>nav a:hover{color: #E15B5C;} 
+    .gnb>li{ border-bottom:1px solid #fff;}
+    .gnb>li>*{ width:500px; margin:0 auto;}
+    .gnb h2{ margin:10px auto 10px auto;}
+    .gnb h2 a{ font-size:14px; margin-left:10px; }
+    .gnb>li ul{ display: flex; margin-bottom:10px; margin-left:10px;}
+    .gnb>li ul li{ margin-right:20px; }
+    .gnb>li ul li a{ font-size:14px; color:#d9d9d9; letter-spacing: -2px;}
+     nav a{ color:#fff; }
+ 
+
+    .visual{ height:420px; margin-bottom:150px; background: url(../images/visual_img1.png) no-repeat center top 100px/auto 300px; }
+    .visual_wrap>div{ padding: 380px 20px 0 20px;  height: 175px; margin: 0 auto; font-family: 'Nanum Myeongjo';}
+
+    .visual div p strong{ display:block; font-size:20px;  margin: 60px 0 10px 0; letter-spacing: -1px;}
+    .visual div p:last-child{ font-size: 15px; letter-spacing: -1px;}
+
+
+    /* 경복궁 행사 안내 (event)*/
+    .event{ height: 500px; margin-bottom:150px;  background:url(../images/event_img1.png) no-repeat left center/1199px auto;}
+    .event_wrap{ margin: 0 auto; }
+    .event_wrap>div{ padding:0 20px; background: rgba(0,0,0,0.7); height: 500px; }
+    .event_wrap>div *{ color:#fff;}
+    .event_wrap>div>p:first-child{  font-size: 20px; font-weight: bold; letter-spacing: -2px; padding-top: 100px; }
+    .event_wrap>div>p:nth-child(2){margin: 90px 0  70px 0; }
+    .event_wrap p:last-child>a{ display: block; height: 50px; line-height: 50px; text-indent: 10px; 
+        width: 100%; letter-spacing: -2px;
+        height: 50px; border:1px solid #fff;}
+    .event_wrap b{ margin-left: 30px; font-weight: normal;}
+    .event_wrap a:hover{ color: #fff; background: rgba(255,255,255,0.2);}
+
+    /* 관람안내(guide)*/ 
+    .guide{ margin:50px 0;}
+    .guide>h3{ text-align:center; font-size:25px; margin:50px; font-family: 'Nanum Myeongjo';}
+
+    .guide ul{  width:80%;  margin:50px auto;}
+    .guide li{ flex:1; margin:50px auto; box-shadow: 0 5px 10px #d9d9d9; width: 80%;}
+    .guide li img{ width: 100%; }
+    .guide li p br{ display: none; }
+    .guide li p:first-child{  margin-bottom: 10px ;}
+    .guide p>strong{text-align: left; margin: 10px; font-size:16px; font-family: 'Inter'; font-weight: bold;}
+    .guide p:last-child{ margin:10px 12px; text-align: left; font-size: 14px; font-family: 'Inter'; padding-bottom: 20px;}
+
+    /* 경복궁의 역사 & 행사 */
+    .history,.ceremony{ margin:150px auto;}
+    .history{  background: url(../images/history_img_600.png) no-repeat  center 100px/auto 500px; }
+    .ceremony{  background: url(../images/ceremony_img_600.png) no-repeat center 100px/auto 500px; }
+    .history_wrap>div, .ceremony_wrap>div{ padding:20px; margin-top: 600px; background:#fff;}
+    .history_wrap>h3,.ceremony_wrap>h3{ font-size: 25px; text-align: center; }
+    .history p>strong,.ceremony p>strong{font-size: 20px; }
+    .history p:nth-child(2),.ceremony p:nth-child(2){ margin: 50px 0 50px 0; letter-spacing: -1px;}
+    .history p:last-child,.ceremony p:last-child{width:100%; height: 50px; background-color: #0466D4; }
+    .history p:last-child>a,.ceremony_wrap p:last-child>a{ 
+        color:#fff; display:block; height:50px; line-height: 50px; text-indent: 30px;
+        display: flex; justify-content: space-between; }
+    .history p:last-child b,.ceremony_wrap b{color:#fff; font-weight: normal; margin-right:50px;}
+
+    /* 경복궁의 역사&행사 마우스 오버시 효과*/
+    .history p:last-child a:hover,.ceremony p:last-child a:hover{color:#0466D4; border:1px solid #0466D4; background: rgba(255,255,255,1); }
+    .history p:last-child a:hover b,.ceremony p:last-child a:hover b{color:#0466D4; }
+
+    /* 알림판(notice) */ 
+    .notice{  margin:50px auto 150px auto;}
+    .notice>h3{ text-align:center; font-size:25px; margin:50px; font-family: 'Nanum Myeongjo';}
+    .notice ul{ width:80%;  margin:50px auto;}
+    .notice>ul li{ flex:1; margin:50px auto; box-shadow: 0 5px 10px #d9d9d9; width: 80%;}
+    .notice>ul li img{ width:100%; }
+    .notice li p br{ display: none; }
+    .notice p:first-child{ margin-bottom: 10px;}
+    .notice p:nth-child(2){margin-bottom:10px; }
+    .notice p strong{  text-align: left; margin: 10px; font-size:16px; font-family: 'Inter'; font-weight: bold;}
+    .notice p:last-child{ margin:10px 12px; text-align: left; font-size: 14px; font-family: 'Inter'; padding-bottom: 20px;}
+
+    /* 연계사이트 */
+    .familysite{ display: none;}
+
+    /* footer */
+    #footer{  background: #000; margin-top: 50px; padding-bottom: 50px;}
+    #footer *{ color: #fff; font-size:14px; }
+
+    .footer_wrap div:first-child>ul:nth-child(1) { width:90%; height:100px; margin:0 auto;  }
+    .footer_wrap div:first-child>p{ position:absolute; margin:-270px 0 0 20px; }
+
+    .footer_wrap ul:nth-of-type(1){ padding-top:130px;}
+
+    .footer_wrap ul:nth-of-type(1) li{ width:50%; line-height:50px; float:left; text-align: center; border-bottom:1px solid rgba(255,255,255,0.3); }
+    .footer_wrap ul:nth-of-type(1) li:nth-child(3){ width:100%; }
+
+    .footer_wrap ul:nth-of-type(2){ display:flex; padding:20px 0 0 20px;} 
+    .footer_wrap div:last-child{ padding-left:20px;  }
+
+}
+
+/*태블릿(600px~799)************************************************************/
+@media screen and (min-width:600px) and (max-width:799px) {
+
+    #header{  position: fixed; z-index: 1; left: 0 ; top:0;  width: 100%; height:140px; background-color: #000;  overflow: hidden;  }
+    .header_wrap{ height:100px; background-color: #fff; }
+    .header_inner{ display: flex; justify-content: space-between;}
+    .header_inner>nav a:hover{color: #E15B5C;} 
+    h1{ margin:30px 0 0 10px; }
+    .nav_open_btn{ margin: 35px 10px 0 0;}
+    nav{position: fixed; left:0; top:0; width:100%; height:100%; background: #000; margin-left:100%; }
+    .nav_close_btn{ text-align: right;}
+    .nav_close_btn button{ margin:30px 30px 0 0; }
+    .nav_close_btn button:hover{ opacity: 0.5; }
+    .gnb>li{ border-bottom:1px solid #fff;}
+    .gnb>li>*{ width:500px; margin:0 auto;}
+    .gnb h2{ margin:30px auto 10px auto;}
+    .gnb h2 a{ font-size:20px;   }
+    .gnb>li ul{ display: flex; margin-bottom:30px;}
+    .gnb>li ul li{ margin-right:20px; }
+     nav a{ color:#fff; }
+
+    #container{margin-top: 100px;}
+    .visual{ height:1000px; margin-bottom:150px; background: url(../images/visual_img1.png) no-repeat center top/auto 867px; }
+    .visual_wrap>div{ padding: 840px 20px 0 20px;  height: 175px; margin: 0 auto; font-family: 'Nanum Myeongjo';}
+    .visual div p strong{ display:block; font-size:20px;  margin: 60px 0 10px 0; letter-spacing: -1px;}
+    .visual div p:last-child{ font-size: 15px; letter-spacing: -1px;}
+
+    /* 경복궁 행사 안내 (event)*/
+    .event{ height: 600px; margin-bottom:150px;  background:url(../images/event_img1.png) no-repeat left center/1199px auto;}
+    .event_wrap{ margin: 0 auto; }
+    .event_wrap>div{ padding-left:40px; background: rgba(0,0,0,0.7); height: 600px; }
+    .event_wrap>div *{ color:#fff;}
+    .event_wrap>div>p:first-child{  font-size: 30px; font-weight: bold; letter-spacing: -2px; padding-top: 140px; }
+    .event_wrap>div>p:nth-child(2){ margin: 80px 0  120px 0;}
+    .event_wrap p:last-child>a{ display: block; height: 60px; line-height: 60px; text-indent: 10px; margin:113px 0 216px 0; width: 373px; height: 60px; border:1px solid #fff;}
+    .event_wrap b{ margin-left: 30px; font-weight: normal;}
+    .event_wrap a:hover{ color: #fff; background: rgba(255,255,255,0.2);}
+
+    /* 관람안내(guide)*/ 
+    .guide{ height: 400px; margin:50px 0;}
+    .guide>h3{ text-align:center; font-size:36px; margin:50px; font-family: 'Nanum Myeongjo';}
+    .guide ul{  display:flex;  justify-content: space-between; width:95%;  margin:0 auto;}
+    .guide li{ flex:1; margin:0 5px; box-shadow: 0 5px 10px #d9d9d9;}
+    .guide li img{ width: 100%; }
+    .guide li p br{ display: none; }
+    .guide li p:first-child{  margin-bottom: 10px ;}
+    .guide p>strong{text-align: left; margin-left: 10px; font-size:17px; font-family: 'Inter'; font-weight: bold;}
+    .guide p:last-child{ margin:15px 10px; text-align: left; font-size: 14px; font-family: 'Inter';  font-weight: light;}
+
+    /* 경복궁의 역사&행사 */
+    .history,.ceremony{ height:1000px; margin:150px auto;}
+    .history{  background: url(../images/history_img_600.png) no-repeat  center 100px; }
+    .ceremony{  background: url(../images/ceremony_img_600.png) no-repeat center 100px; }
+    .history_wrap>div, .ceremony_wrap>div{ padding:60px; margin-top: 700px; background:#fff;}
+    .history_wrap>h3,.ceremony_wrap>h3{ font-size: 36px; text-align: center; }
+    .history p>strong,.ceremony p>strong{font-size: 20px; }
+    .history p:nth-child(2),.ceremony p:nth-child(2){ margin: 50px 0 50px 0;}
+    .history p:last-child,.ceremony p:last-child{width:400px; height: 50px; background-color: #0466D4; }
+    .history p:last-child>a,.ceremony_wrap p:last-child>a{ 
+        color:#fff; display:block; height:50px; line-height: 50px; text-indent: 30px;
+        display: flex; justify-content: space-between; }
+    .history p:last-child b,.ceremony_wrap b{color:#fff; font-weight: normal; margin-right:50px;}
+
+    /* 경복궁의 역사&행사 마우스 오버시 효과*/
+    .history p:last-child a:hover,.ceremony p:last-child a:hover{color:#0466D4; border:1px solid #0466D4; background: rgba(255,255,255,1); }
+    .history p:last-child a:hover b,.ceremony p:last-child a:hover b{color:#0466D4; }
+
+    /* 알림판(notice) */ 
+    .notice{  margin:50px auto 150px auto;}
+    .notice>h3{ clear:both; text-align: center; font-size: 36px; margin:50px;}
+    .notice ul{  display:flex; justify-content: space-between; width:95%;  margin:0 auto;}
+    .notice>ul li{ flex:1; margin:0 5px; box-shadow: 10px 5px 10px #d9d9d9;}
+    .notice>ul li img{ width:100%; }
+    .notice li p br{ display: none; }
+    .notice p:first-child{ margin-bottom: 10px;}
+    .notice p:nth-child(2){margin-bottom:10px; }
+    .notice p strong{  text-align: left; margin-left: 10px; font-size:16px; font-family: 'Inter'; font-weight: bold;}
+    .notice p:last-child{  margin:15px 10px; text-align: left; font-size: 14px; font-family: 'Inter';  font-weight: light;}
+
+    /* 연계사이트 */
+    .familysite{ display: none;}
+
+    /* footer */
+    #footer{  background: #000; margin-top: 50px; padding-bottom: 50px;}
+    #footer *{ color: #fff;}
+    .footer_wrap div:first-child>ul:nth-child(1) {width:90%; margin:0 auto; border-bottom:1px solid rgba(255,255,255,0.3); }
+    .footer_wrap div:first-child>p{ position:absolute; margin:-190px 0 0 50px; }
+    .footer_wrap ul:nth-of-type(1){ padding: 100px 0 20px 20px; }
+    .footer_wrap ul:first-child li{padding-right: 10px; margin-right:10px;}
+    .footer_wrap ul:first-child li:not(:last-child){ border-right:1px solid rgba(255,255,255,0.3); }
+    .footer_wrap ul:nth-of-type(2){ padding:20px 0 0 50px; }
+    .footer_wrap ul{ display: flex;}
+    .footer_wrap div:last-child{ padding-left:50px;  }
+}
+
+/*저해상도 데스크탑,태블릿(800px~1199)******************************************/
+@media screen and (min-width:800px) and (max-width:1199px) {
+
+    #header{  position: fixed; z-index: 1; left: 0 ; top:0;  width: 100%; height:140px; background-color: #000;  overflow: hidden;  }
+    .header_wrap{ height:140px; background-color: #fff; }
+    .header_inner{ display: flex; justify-content: space-between;}
+    .header_inner>nav a:hover{color: #E15B5C;} 
+    h1{  margin:30px 0 0 10px; }
+    .nav_open_btn{  margin: 35px 10px 0 0;}
+    nav{position: fixed; left:0; top:0; width:100%; height:100%; background: #000; margin-left:100%; }
+    .nav_close_btn{ text-align: right;}
+    .nav_close_btn button{ margin:30px 30px 0 0; }
+    .nav_close_btn button:hover{ opacity: 0.5; }
+    .gnb>li{ border-bottom:1px solid #fff;}
+    .gnb>li>*{ width:500px; margin:0 auto;}
+    .gnb h2{ margin:30px auto 10px auto;}
+    .gnb h2 a{ font-size:30px;   }
+    .gnb>li ul{ display: flex; margin-bottom:30px;}
+    .gnb>li ul li{ margin-right:20px; }
+     nav a{ color:#fff; }
+
+    #container{margin-top: 100px;}
+    .visual{ height:1000px; margin-bottom:150px; background: url(../images/visual_img1.png) no-repeat center top/auto 867px; }
+    .visual_wrap>div{ padding: 840px 20px 0 20px;  height: 175px; margin: 0 auto; font-family: 'Nanum Myeongjo';}
+    .visual div p strong{ display:block; font-size:30px;  margin: 70px 0 10px 0;}
+    .visual div p:last-child{ font-size: 20px; }
+
+    /* 경복궁 행사 안내 (event)*/
+    .event{ height: 700px; margin-bottom:150px;  background:url(../images/event_img1.png) no-repeat left center/1199px auto;}
+    .event_wrap{ margin: 0 auto; }
+    .event_wrap>div{ padding-left:50px; background: rgba(0,0,0,0.7); height: 700px; }
+    .event_wrap>div *{ color:#fff;}
+    .event_wrap>div>p:first-child{  font-size: 35px; font-weight: bold; letter-spacing: -2px; padding-top: 150px; }
+    .event_wrap>div>p:nth-child(2){ margin: 79px 0  119px 0; }
+ 
+    .event_wrap p:last-child>a{ display: block; height: 60px; line-height: 60px; text-indent: 10px; margin:113px 0 216px 0; width: 373px; height: 60px; border:1px solid #fff;}
+    .event_wrap b{ margin-left: 30px; font-weight: normal;}
+    .event_wrap a:hover{ color: #fff; background: rgba(255,255,255,0.2);}
+
+    /* 관람안내(guide)*/ 
+    .guide{ height: 650px; margin:50px 0;}
+    .guide>h3{ text-align:center; font-size:36px; margin:50px; font-family: 'Nanum Myeongjo';}
+    .guide ul{  display:flex;  justify-content: space-between; width:95%;  margin:0 auto;}
+    .guide li{ flex:1; margin:0 5px; padding-bottom: 30px; box-shadow: 0 5px 10px #d9d9d9;}
+    .guide li img{ width: 100%; }
+    .guide li p br{ display: none; }
+    .guide li p:first-child{  margin-bottom: 10px ;}
+    .guide li p:nth-child(2){ margin-bottom:20px; }
+    .guide p>strong{text-align: left; margin-left: 28px; font-size:20px; font-family: 'Inter'; font-weight: bold;}
+    .guide p:last-child{ margin:0 28px; text-align: left; font-family: 'Inter';  font-weight: light;}
+
+    /* 경복궁의 역사&행사 */
+    .history,.ceremony{ height:1300px; margin:50px auto;}
+    .history{  background: url(../images/history_img.png) no-repeat  center 150px; }
+    .ceremony{  background: url(../images/ceremony_img.png) no-repeat center 150px; }
+    .history_wrap>div, .ceremony_wrap>div{ padding:100px; margin-top: 700px;  height:850px; background:#fff;}
+    .history_wrap>h3,.ceremony_wrap>h3{ font-size: 36px; text-align: center; }
+    .history p>strong,.ceremony p>strong{font-size: 30px; }
+    .history p:nth-child(2),.ceremony p:nth-child(2){ margin: 80px 0 120px 0;}
+    .history p:last-child,.ceremony p:last-child{ height: 60px; background-color: #0466D4; }
+    .history p:last-child>a,.ceremony_wrap p:last-child>a{ 
+        color:#fff; display:block; height:60px; line-height: 60px; text-indent: 50px;
+        display: flex; justify-content: space-between; }
+    .history p:last-child b,.ceremony_wrap b{color:#fff; font-weight: normal; margin-right:50px;}
+
+    /* 경복궁의 역사&행사 마우스 오버시 효과*/
+    .history p:last-child a:hover,.ceremony p:last-child a:hover{color:#0466D4; border:1px solid #0466D4; background: rgba(255,255,255,1); }
+    .history p:last-child a:hover b,.ceremony p:last-child a:hover b{color:#0466D4; }
+
+    /* 알림판(notice) */ 
+    .notice{  margin:50px auto 150px auto;}
+    .notice>h3{ clear:both; text-align: center; font-size: 36px; margin:50px;}
+    .notice ul{  display:flex; justify-content: space-between; width:95%;  margin:0 auto;}
+    .notice>ul li{ flex:1; margin:0 5px; padding-bottom: 30px; box-shadow: 10px 5px 10px #d9d9d9;}
+    .notice>ul li img{ width:100%; }
+    .notice li p br{ display: none; }
+    .notice p:first-child{ margin-bottom: 20px;}
+    .notice p:nth-child(2){margin-bottom:20px; }
+    .notice p strong{  font-size:20px; margin-left: 29px; font-family: 'Inter'; }
+    .notice p:last-child{ margin:0 28px; margin-top: 35px; font-family: 'Inter'; }
+
+    /* 연계사이트 */
+    .familysite{ width: 100%; margin:100px auto;}
+    .familysite_wrap{ overflow: hidden; width:95%; margin:0 2.5%; }
+    .familysite_inner{ display: flex; width: 200%;} 
+    .familysite ul{ flex:1; display: flex; justify-content: space-between;  }
+   
+    .more_btn{ position: absolute; right:20px; margin-top: -40px; }
+    .more_btn>button{ width: 40px; height: 40px; border-radius: 30px; font-size: 20px; border:0; }
+    .more_btn>button:hover{ background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%); color: #fff; }
+
+    /* footer */
+    #footer{  background: #000; margin-top: 50px; padding-bottom: 50px;}
+    #footer *{ color: #fff;}
+    .footer_wrap div:first-child>ul:nth-child(1) {width:90%; margin:0 auto; border-bottom:1px solid rgba(255,255,255,0.3); }
+    .footer_wrap div:first-child>p{ position:absolute; margin:-190px 0 0 50px; }
+    .footer_wrap ul:nth-of-type(1){ padding: 100px 0 20px 20px; }
+    .footer_wrap ul:first-child li{padding-right: 10px; margin-right:10px;}
+    .footer_wrap ul:first-child li:not(:last-child){ border-right:1px solid rgba(255,255,255,0.3); }
+    .footer_wrap ul:nth-of-type(2){ padding:20px 0 0 50px; }
+    .footer_wrap ul{ display: flex;}
+    .footer_wrap div:last-child{ padding-left:50px;  }
+    /*
+    .footer_wrap{  height: 250px; margin: 0 auto; }
+    .footer_wrap>div>ul:first-child{ display:flex; float: left;  margin-top: 55px; }
+    .footer_wrap ul:first-child>li{margin:25px;}
+    .footer_wrap>div>ul:nth-child(2){ display:flex; float:left; margin:70px 0 0 55px;}
+    .footer_wrap>div:first-child p{ float: right; margin-top: 70px; }
+    .footer_wrap>div:last-child{ clear:left; float:left; margin-top:50px; margin-left: 25px; }
+    */
+}
+
+/*데스크탑1(1200px~1599)********************************************************/
+@media screen and (min-width:1200px) and (max-width:1599px) {
+
+    #header{  position: fixed; z-index: 1; left: 0 ; top:0;  width: 100%; height:140px; background-color: #000;  overflow: hidden; box-shadow: 0 3px 5px rgba(0,0,0,0.2); }
+    .header_wrap{ height:150px; background-color: #fff; }
+    .header_inner{ width:1150px; margin:0px auto;}
+    h1{ float:left; margin-top: 50px 0 50px 0; line-height:150px;}
+    .nav_open_btn,.nav_close_btn{ display: none;}
+    nav{ float:right; }
+    .gnb{ display:flex;}
+    .gnb a:hover{color:#E15B5C;}
+    .gnb>li{ margin-left: 30px;}
+    .gnb li ul{margin-top: 50px;}
+    .gnb ul>li{margin-bottom: 19px;}
+    .gnb h2{  font-size:20px; line-height: 150px;}
+    .gnb>li li>a{  color: #fff;}
+
+    #container{margin-top: 140px;}
+    .visual{ height:1150px; margin-bottom:150px; background: url(../images/visual_img1.png) no-repeat center top/auto 1067px; }
+    .visual_wrap>div{ padding-top: 1040px; width: 1200px; height: 175px; margin: 0 auto; font-family: 'Nanum Myeongjo';}
+    .visual div p strong{ font-size:30px;  float:left; margin-top: 70px;}
+    .visual div p:last-child{ font-size: 20px;  float:left; margin: 80px 0 0 40px; }
+
+    /* 경복궁 행사 안내 (event)*/
+    .event{ height: 700px; margin-bottom:150px;  background:url(../images/event_img1.png) no-repeat right -100px top;}
+    .event_wrap{ width:1150px; margin: 0 auto; }
+    .event_wrap>div{ background: #fff; width:50%; height: 700px; }
+    .event_wrap>div>p:first-child{  font-size: 35px; font-weight: bold; letter-spacing: -2px; padding-top: 100px; }
+    .event_wrap>div>p:nth-child(2){ margin: 79px 0  119px 0; }
+    .event_wrap p:last-child>a{ display: block; height: 60px; line-height: 60px; text-indent: 10px; margin:113px 0 216px 0; width: 373px; height: 60px; border:1px solid #000;}
+    .event_wrap b{ margin-left: 30px; font-weight: normal;}
+    .event_wrap a:hover{ color: #fff; background:#000;}
+
+    /* 관람안내(guide)*/ 
+    .guide{ height: 650px; margin:50px auto;}
+    .guide>h3{ text-align:center; font-size:36px; margin:50px; font-family: 'Nanum Myeongjo';}
+    .guide ul{  display:flex;  justify-content: space-between; width:1200px;  margin:0 auto;}
+    .guide li{ width: 350px; height: 455px; box-shadow: 0 5px 10px #d9d9d9;}
+    .guide li img{ width: 100%; }
+    .guide li p br{ display: none; }
+    .guide li p:first-child{ height: 305px; margin-bottom: 10px ;}
+    .guide li p:nth-child(2){ margin-bottom:20px; }
+    .guide p>strong{text-align: left; margin-left: 28px; font-size:20px; font-family: 'Inter'; font-weight: bold;}
+    .guide p:last-child{ margin:0 28px; text-align: left; font-family: 'Inter';  font-weight: light;}
+
+    /* 경복궁의 역사 */
+    .history{ height:850px; margin:50px auto; background: url(../images/history_img.png) no-repeat left 150px; }
+    .history_wrap{ width:1150px; margin:0 auto; }
+    .history_wrap>div{  height:850px; width:50%;  float:right; background:#fff;}
+    .history_wrap>h3{ font-size: 36px; text-align: center; margin:50px;}
+    .history p{ margin-top: 117px; }
+    .history p>strong{font-size: 30px; margin-left: 100px; }
+    .history p:nth-child(2){ margin: 79px 0  119px 100px; }
+    .history p:last-child{ margin:113px 216px 216px 100px; width: 373px; height: 60px; background-color: #0466D4;}
+    .history p:last-child>a{ color:#fff; display:block; height:60px; line-height: 60px; text-indent: 50px;}
+    .history p:last-child b{ margin-left:200px; color:#fff; font-weight: normal;}
+
+    /* 경복궁의 역사&행사 마우스 오버시 효과*/
+    .history p:last-child a:hover,.ceremony p:last-child a:hover{color:#0466D4; border:1px solid #0466D4; background: rgba(255,255,255,1); }
+    .history p:last-child a:hover b,.ceremony p:last-child a:hover b{color:#0466D4; }
+    
+    /*행사*/
+    .ceremony{  height: 850px; margin:50px auto 150px auto; background: url(../images/ceremony_img.png) no-repeat right 150px;}
+    .ceremony_wrap{ width:1150px; margin: 0 auto;}
+    .ceremony_wrap>div{  height:850px; width:50%; background: #fff; }
+    .ceremony_wrap>h3{ clear:both; font-size: 36px; text-align: center; margin: 50px;}
+    .ceremony p:first-child{ padding-top:80px;}      
+    .ceremony p>strong{ font-size: 40px; margin-left: 100px;}
+    .ceremony p:nth-child(2){ margin:79px 0 119px 100px;}
+    .ceremony p:last-child{ margin:113px 216px 216px 100px; width: 373px; height: 60px; background-color: #0466D4; }
+    .ceremony_wrap p:last-child>a{ display:block; color:#fff; height: 60px; line-height: 60px; text-indent: 50px;}
+    .ceremony_wrap b{  color: #fff; margin-left: 150px;font-weight: normal;}
+
+    /* 알림판(notice) */ 
+    .notice{ height: 700px; margin:50px auto;}
+    .notice>h3{ clear:both; text-align: center; font-size: 36px; margin:50px;}
+    .notice ul{  display:flex; width:1200px; justify-content: space-between; margin:0 auto; }
+    .notice>ul li{ width:350px; height: 455px; box-shadow: 10px 5px 10px #d9d9d9;}
+    .notice>ul li img{ width:100%; }
+    .notice li p br{ display: none; }
+    .notice p:first-child{ height:305px; margin-bottom: 10px;}
+    .notice p:nth-child(2){margin-bottom:20px; }
+    .notice p strong{  font-size:20px; margin-left: 29px; font-family: 'Inter'; }
+    .notice p:last-child{ margin:0 28px; margin-top: 35px; font-family: 'Inter'; }
+
+    /* 연계사이트 */
+    .familysite{ width: 100%; margin:100px auto;}
+    .familysite ul{ width: 1150px; display: flex; justify-content: space-between;margin: 0 auto; }
+       .more_btn{ position: absolute; left:50%; margin: -40px 0 0 560px; }
+    .more_btn>button{ width: 40px; height: 40px; border-radius: 30px; font-size: 20px; border:0; }
+    .more_btn>button:hover{ background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%); color: #fff; }
+    .familysite_wrap{ overflow: hidden;}
+    .familysite_inner{ display: flex; width: 200%;} 
+
+    /* footer */
+    #footer{ height: 300px; background: #000; margin-top: 50px;}
+    #footer *{ color: #fff;}
+    .footer_wrap{  width:1150px; height: 250px; margin: 0 auto; }
+    .footer_wrap>div>ul:first-child{ display:flex; float: left;  margin-top: 55px; }
+    .footer_wrap ul:first-child>li{margin:25px;}
+    .footer_wrap>div>ul:nth-child(2){ display:flex; float:left; margin:70px 0 0 55px;}
+    .footer_wrap>div:first-child p{ float: right; margin-top: 70px; }
+    .footer_wrap>div:last-child{ clear:left; float:left; margin-top:50px; margin-left: 25px; }
+
+}
+
+/*데스크탑2(1600)*************************************************************/
+@media screen and (min-width:1600px)  {
+
+        #header{  position: fixed; z-index: 1; left: 0 ; top:0;  width: 100%; height:140px; background-color: #000;  overflow: hidden; box-shadow: 0 3px 5px rgba(0,0,0,0.2); }
+        .header_wrap{ height:150px; background-color: #fff; }
+        .header_inner{ width:1600px; margin:0px auto;}
+        h1{ float:left; margin-top: 50px 0 50px 150px; line-height:150px;}
+        .nav_open_btn,.nav_close_btn{ display: none;}
+        nav{ float:right; margin-right: 63px; }
+        .gnb{ display:flex;}
+        .gnb a:hover{color:#E15B5C;}
+        .gnb>li{ margin-left: 100px;}
+        .gnb li ul{margin-top: 50px;}
+        .gnb ul>li{margin-bottom: 19px;}
+        .gnb h2{  font-size:20px; line-height: 150px;}
+        .gnb>li li>a{  color: #fff;}
+
+        #container{margin-top: 140px;}
+        .visual{ height:1200px; background: url(../images/visual_img1.png) no-repeat center top/auto 1067px; }
+        .visual_wrap>div{ padding-top: 1040px; width: 1600px; height: 175px; margin: 0 auto; font-family: 'Nanum Myeongjo';}
+        .visual div p strong{ font-size:30px;  float:left; margin-top: 70px;}
+        .visual div p:last-child{ font-size: 20px;  float:left; margin: 80px 0 0 40px; }
+
+        /* 경복궁 행사 안내 (event)*/
+        .event{  height: 725px; background:url(../images/event_img1.png) no-repeat right;}
+        .event_wrap{ width:1600px; margin: 0 auto; }
+        .event_wrap>div{ float:left;  background: #fff; margin-left: 100px; }
+        .event_wrap>div>p:first-child{   font-size: 35px; font-weight: bold; letter-spacing: -2px; padding-top: 100px; }
+        .event_wrap>div>p:nth-child(2){ margin: 79px 0  119px 0; }
+        .event_wrap p:last-child>a{ display: block; height: 60px; line-height: 60px; text-indent: 10px; margin:113px 0 216px 0; width: 373px; height: 60px; border:1px solid #000;}
+        .event_wrap b{ margin-left: 30px; font-weight: normal;}
+        .event_wrap a:hover{ color: #fff; background:#000;}
+
+        /* 관람안내(guide)*/ 
+        .guide{  height: 950; margin:50px auto;}
+        .guide>h3{ text-align:center; font-size:36px; margin:50px; font-family: 'Nanum Myeongjo';}
+        .guide ul{  display:flex;  justify-content: space-between; width:1420px;   margin:0 auto;}
+        .guide li{ width: 425px; height: 547px; box-shadow: 0 5px 10px #d9d9d9;}
+        .guide li p:first-child{  height: 365px; margin-bottom: 30px ;}
+        .guide p>strong{text-align: left; margin-left: 28px; font-size:24px; font-family: 'Inter'; font-weight: bold;}
+        .guide p:last-child{ margin-top: 38px; margin-left: 28px; text-align: left; font-family: 'Inter';  font-weight: light;}
+
+        /* 경복궁의 역사 */
+        .history{ height:850px; margin:50px auto; background: url(../images/history_img.png) no-repeat left 150px; }
+        .history_wrap{ width:1600px; margin:0 auto; }
+        .history_wrap>div{ height:850px ; float:right; background:#fff; margin-right: 60px;}
+        .history_wrap>h3{ font-size: 36px; text-align: center; margin:50px;}
+        .history p{ margin-top: 117px; }
+        .history p>strong{font-size: 40px; margin-left: 100px; }
+        .history p:nth-child(2){ margin: 79px 0  119px 100px; }
+        .history p:last-child{ margin:113px 216px 216px 100px; width: 373px; height: 60px; background-color: #0466D4;}
+        .history p:last-child>a{ color:#fff; display:block; height:60px; line-height: 60px; text-indent: 50px;}
+        .history p:last-child b{ margin-left:200px; color:#fff; font-weight: normal;}
+
+        /* 경복궁의 역사&행사 마우스 오버시 효과*/
+        .history p:last-child a:hover,.ceremony p:last-child a:hover{color:#0466D4; border:1px solid #0466D4; background: rgba(255,255,255,1); }
+        .history p:last-child a:hover b,.ceremony p:last-child a:hover b{color:#0466D4; }
+        
+        /*행사*/
+        .ceremony{  height: 850px; margin:50px auto; background: url(../images/ceremony_img.png) no-repeat right 150px;}
+        .ceremony_wrap{ width: 1600px; margin: 0 auto;}
+        .ceremony_wrap>div{ float:left;  height: 850px; margin-left: 50px;  background: #fff; }
+        .ceremony_wrap>h3{ clear:both; font-size: 36px; text-align:center; margin: 50px auto;}
+        .ceremony p:first-child{ padding-top:80px;}      
+        .ceremony p>strong{ font-size: 40px; margin-left: 100px;}
+        .ceremony p:nth-child(2){ margin:79px 0 119px 100px;}
+        .ceremony p:last-child{ margin:113px 216px 216px 100px; width: 373px; height: 60px; background-color: #0466D4; }
+        .ceremony_wrap p:last-child>a{ display:block; color:#fff; height: 60px; line-height: 60px; text-indent: 50px;}
+        .ceremony_wrap b{  color: #fff; margin-left: 150px;font-weight: normal;}
+
+        /* 알림판(notice) */ 
+        .notice{ height: 700px; margin:50px auto;}
+        .notice>h3{  text-align: center; font-size: 36px; margin: 50px; }
+        .notice ul{  display:flex; width:1400px; justify-content: space-between; margin:0 auto; }
+        .notice>ul li{ width: 425px; height: 547px; box-shadow: 10px 5px 10px #d9d9d9;}
+        .notice p:first-child{ margin-bottom: 32px;}
+        .notice p strong{  font-size:24px; margin-left: 29px; font-family: 'Inter'; }
+        .notice p:last-child{ margin-left: 29px; margin-top: 35px; font-family: 'Inter'; }
+
+        /* 연계사이트 */
+        .familysite{ width: 100%; margin:100px auto;}
+        .familysite ul{ width: 1362px; display: flex; justify-content: space-between;margin: 0 auto; }
+        .more_btn{ position: absolute; left:50%; margin:-50px 0 0 680px; }
+        .more_btn>button{ width: 40px; height: 40px; border-radius: 30px; font-size: 20px; border:0; }
+        .more_btn>button:hover{ background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%); color: #fff; }
+        .familysite_wrap{ overflow: hidden;}
+        .familysite_inner{ display: flex; width: 200%;} 
+
+        /* footer */
+        #footer{ height: 300px; background: #000; margin-top: 50px;}
+        #footer *{ color: #fff;}
+        .footer_wrap{  width:1600px; height: 250px; margin: 0 auto; }
+        .footer_wrap>div>ul:first-child{ display:flex; float: left;  margin-top: 55px; }
+        .footer_wrap ul:first-child>li{margin:25px;}
+        .footer_wrap>div>ul:nth-child(2){ display:flex; float:left; margin:70px 0 0 55px;}
+        .footer_wrap>div:first-child p{ float: right; margin-top: 70px; }
+        .footer_wrap>div:last-child{ clear:left; float:left; margin-top:50px; margin-left: 25px; }
+    
+}
+
+
+

@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <!--1. 문자해독 다국어 지원코드(유니코드)-->
+        <meta charset="utf-8">
+
+        <!--2. 문서의 유형(doctyp html)선언과 함께 호환돠는 브라우저의 호환 모드로써
+            과거 IE버전은 최신 edge 브라우저에 맞춰 호환될 수 있도록 렌더링(현재IE서비스 중단,삭제)-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!--3. 검색엔진에 검색되는 검색키워드-->
+        <meta name="keywords" content="스마트 웹 콘텐츠 UI/UX디자인 & 구현,가상리뉴얼 프로젝트">
+
+        <!--4. 검색엔진에 소개되는 사이트 설명-->
+        <meta name="description" content="업데이트 시기에 맞춰 특정 사이트 가상리뉴얼 프로젝트 진행">
+        
+       
+        <!--4.2. 반응형웹(모바일)필수코드  ★★★★★
+                meta name="viewpoint" 최초html,css문서를 해독하는 출력화면 관련 설명
+                 initial-scale=1,
+                 minimum-scale=1,
+                 maximum-scale=1       최초html,css문서를 해독하는 출력화면에 맞춰 최소,최대 1배율을 유지
+                 user-scalable=no      모바일 환경에서 화면 확대,축소 기능을 사용하지 않겠다.
+        -->
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+
+
+        <!--5. 브라우저 상단탭에 출력될 사이트 타이틀-->
+        <title>문화재청 경복궁</title>
+
+        <!--6. 외부 CSS연동-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/sub_style.css">
+
+
+
+        <!--6.2.파비콘(브라우저 상단탭 타이틀 앞에 적용되는 아이콘)
+        파비콘이란 웹사이트 또는 웹 페이지를 대표하기 위해 웹 브라우저에서 사용되는 16x16 픽셀의 작은 이미지입니다.
+        즐겨찾기 아이콘(favorite icon)의 줄임말로 주로 웹 브라우저 상단에 있는 탭에 표시됩니다.
+
+        ICO
+        Microsoft에서 개발한 파일 형식인 ICO는 파비콘의 기존 파일 형식이었습니다.
+        ICO는 모든 브라우저에서 지원하며 파일 하나가 여러 가지 크기의 이미지를 포함할 수 있습니다.
+
+        PNG: PNG는 웹사이트 제작자들에게 아주 익숙한 파일 형식이기 때문에 파비콘의 파일 형식으로 자주 사용됩니다.
+        만들기 쉬운 파일 형식이며, 일반적으로 이미지 및 파비콘을 고화질로 전송합니다.
+        PNG 파일은 가볍다는 이점 또한 가지고 있는데요. 이는 파일들이 빠르게 로드된다는 것을 의미합니다.
+
+
+        SVG
+        SVG 파일은 가볍기로 유명합니다.
+        사이트의 성능을 저하시키지 않으면서 고화질 이미지를 전송할 수 있습니다.
+        과거에는 브라우저 호환성 문제로 파비콘의 SVG 사용이 제한되었지만 점점 변화되고 있습니다.
+        ※https://www.adobe.com/kr/creativecloud/file-types/image/vector/svg-file.html
+        -->
+        <link rel="shortcut icon" href="images/test.png">
+
+        <!--7. 외부js(jQuery)압축파일 연동CDN-->
+        <script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
+        <script src="js/motion.js"></script>
+    </head>
+
+    <body>
+        <!--1. 전체 헤더(검정배경)-->
+        <header id="header">
+
+            <!--2. 전체 헤더(하얀색 배경)-->
+            <div class="header_wrap">
+
+                <!--3. 전체 헤더(가운데 정렬)-->
+                <div class="header_inner">
+
+                    <h1><a href="index.html"><img src="images/logo_img.png" alt="경복궁"></a></h1>
+                    <p class="nav_open_btn"><button><img src="images/nav_open_btn.png" alt="메뉴열람"></button></p>
+                    <nav>
+                        <p class="nav_close_btn"><button><img src="images/nav_close_btn.png" alt="메뉴닫힘"></button></p>
+                        <ul class="gnb">
+                            <li>
+                                <h2><a href="sub1_1.html">관람안내</a></h2>
+                                <ul>
+                                    <li><a href="sub1_1.html">관람시간 및 규정</a></li>
+                                    <li><a href="sub1_2.html">관람시간 및 요금</a></li>
+                                    <li><a href="sub1_3.html">해설안내</a></li>
+                                    <li><a href="sub1_4.html">오시는 길</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub2_1.html">관람예약/신청</a></h2>
+                                <ul>
+                                    <li><a href="sub2_1.html">경회루 특별관람 예약</a></li>
+                                    <li><a href="sub2_2.html">칠궁 단체해설 예약</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <h2><a href="sub3_1.html">참여마당</a></h2>
+                                <ul>
+                                    <li><a href="sub3_1.html">자주하는 질문</a></li>
+                                    <li><a href="https://www.cha.go.kr/html/HtmlPage.do?pg=/minwon/minwon_guide.jsp&mn=NS_02_01_01" target="_blank">민원신청</a></li>                                    
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub4_1.html">행사</a></h2>
+                                <ul>
+                                    <li><a href="sub4_1.html">수문장교대의식</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub5_1.html">자료마당</a></h2>
+                                <ul>
+                                    <li><a href="sub5_1.html">경복궁의 역사</a></li>
+                                    <li><a href="sub5_2.html">경복궁 들여다보기</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub6_1.html">미리보는 경복궁</a></h2>
+                                <ul>
+                                    <li><a href="sub6_1.html">경복궁의 사계</a></li>
+                                </ul>
+                            </li> 
+                        </ul>
+                        
+                    </nav>
+
+                </div>
+            </div>
+        </header>
+
+        <section id="sub_container">
+            <div class="sub_container_wrap">
+
+                <!--서브 공통 비주얼-->
+                <div class="sub_visual sub2_bg">
+
+                    <div class="sub_visual_wrap"> 
+                        <h2>관람예약/신청</h2> 
+                    </div>
+                </div>
+
+                <!--서브 공통 lnb-->
+                <div class="sub_lnb">
+                    <ul>
+                        <li><a href="sub2_1.html">경회루 특별예약관람</a></li>
+                        <li><a href="sub2_2.html" class="sub_lnb_select">칠궁 단체해설 예약</a></li>
+                    </ul>
+                </div>
+
+                <!--서브 공통 h3-->
+                <h3>칠궁 단체해설 예약</h3>
+
+                <!--서브 개별-->
+                <div class="sub2_2">
+                
+                    <!--1. 칠궁 단체해설 관람 주요내용-->
+                    <div class="tour_caution tour_caution2_2">
+                        <p><strong>칠궁 단체해설 관람 주요내용</strong></p>
+                        <ul>
+                            <p><b>단체</b></p>
+                            <li>10인 이상의 단체는 예약이 필요하며 한 회당 30명까지 예약이 가능합니다.</li>
+                            <li> 예약 및 취소 기간 : 관람희망일 7일 전 10:00 ~ 관람희망일 1일 전 23:00 까지 </li>
+                            <li>※ 단체해설예약은 별도해설이 아니며, 예약자와 개별적으로 참여하는 관람객이 함께 해설을 받습니다.</li>
+                        </ul>
+                        <ul> 
+                            <p><b>개인</b></p>
+                            <li>10인 미만 개인 관람객은 별도의 예약 없이 해설에 참여하실 수 있습니다.</li>
+                        </ul>
+                    </div>
+
+                    <!--2. 예약날짜 선택 구역-->
+                    <div class="tour_date">
+                        <h4>1. 예약날짜 선택</h4>
+                        <p>원하시는 날짜를 선택하여 예약시작하세요.</p>
+                        <img src="images/callender_img.png" alt="2022년 11월~12월 예약 달력">
+                        <!--예약표 -->
+                        <div>
+                            <p>예약표</p>
+                            <div>
+                                <P><strong>칠궁 단체해설예약</strong></P>
+                                <P>※티켓 예약일 당일만 유효</P>
+                                <p>경복궁입장권 소지 시 무료</p>
+                                <ul>
+                                    <li>성인(12+)</li>
+                                    <li>2명</li>
+                                </ul>
+                            </div>
+                            <p><a href="https://www.royalpalace.go.kr/content/guide/guide32_check.asp">예약확인 및 취소</a></p>
+                            
+                        </div>
+                    </div>
+
+                    <!--3. 인원수 선택구역-->
+                    <div class="tour_count">
+                        <h4>2. 인원수 선택</h4>
+                        <p>
+                            칠궁 단체해설 예약은 10인 이상의 단체는 예약이 필요하며 한 회당 30명까지 예약이 가능합니다.       
+                            <b>※ 초등학생 이상은 1인에 해당됩니다.</b>
+                        </p>
+                        <div>
+                            <ul>
+                                <li>개인</li>
+                                <li><button></button></li> 
+                                <li>단체</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--4. 해설시간 구역-->
+                    <div class="tour_time2">
+                        <h4>3. 해설시간</h4>
+                        <p>한국어 해설만 진행하고 있으며, <b>휴궁일인 화요일</b>
+                            제외한 요일은 해설 선택 가능합니다. (내국인15명/ 외국인5명)</p>
+                        <ul>
+                            <li>09:30</li>
+                            <li>11:00</li>
+                            <li>13:00</li>
+                            <li>14:30</li>
+                            <li>16:00</li>
+                        </ul> 
+                    </div>
+
+                    <!--5. 예약확정 배너 구역-->
+                    <div class="tour_banner">
+                        <h4>4.예약확정하기</h4>
+                        <img src="images/sub2_1_tour_banner_img.png" alt="아름다운 우리나라 국보 경회루의 밤 야경(왼쪽)">
+                        <div>
+                            <p><strong>칠궁 단체해설예약</strong></p>
+                            <ul>
+                                <li>
+                                    청와대 옆 비밀의 궁 ' 칠궁'은 조선시대 역대 왕을 낳은 생모이면서<br> 
+                                    왕비가 아니었던 후궁 일곱 여인의 신위를 모신 묘당입니다.<br> 
+                                    비밀스러운 칠궁을 해설을 통해 만나보세요.
+                                </li>
+                                <li>※ 10인 이상의 단체는 예약이 필요하며 한 회당 30명까지 예약이 가능합니다.</li>
+                            </ul>
+                            <p><a href="#">예약하기</a></p>
+                       </div>
+                    </div> 
+ 
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="footer_wrap">
+                <div>
+                    <ul>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">저작권정책</a></li>
+                        <li><a href="#">개인정보침해신고센터</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="#"><img src="images/sns_img1.png" alt="유튜브 바로가기"></a></li>
+                        <li><a href="#"><img src="images/sns_img2.png" alt="페이스북 바로가기"></a></li>
+                        <li><a href="#"><img src="images/sns_img3.png" alt="인스타 바로가기"></a></li>
+                    </ul>
+
+                    <p><img src="images/logo_img.png" alt="경복궁"></p>
+                </div>
+                   
+                <div>
+                    <p>서울특별시 종로구 사직로 161<br></p>
+                    <p>전화번호02-3700-3900  팩스02-3700-3909</p>
+                    <p>COPYR IGHT 2023 BY GYEONGBOKGUNG. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

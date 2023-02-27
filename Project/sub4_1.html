@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <!--1. 문자해독 다국어 지원코드(유니코드)--> 
+        <meta charset="utf-8">
+
+        <!--2. 문서의 유형(doctyp html)선언과 함께 호환돠는 브라우저의 호환 모드로써
+            과거 IE버전은 최신 edge 브라우저에 맞춰 호환될 수 있도록 렌더링(현재IE서비스 중단,삭제)-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!--3. 검색엔진에 검색되는 검색키워드-->
+        <meta name="keywords" content="스마트 웹 콘텐츠 UI/UX디자인 & 구현,가상리뉴얼 프로젝트">
+
+        <!--4. 검색엔진에 소개되는 사이트 설명-->
+        <meta name="description" content="업데이트 시기에 맞춰 특정 사이트 가상리뉴얼 프로젝트 진행">
+        
+       
+        <!--4.2. 반응형웹(모바일)필수코드  ★★★★★
+                meta name="viewpoint" 최초html,css문서를 해독하는 출력화면 관련 설명
+                 initial-scale=1,
+                 minimum-scale=1,
+                 maximum-scale=1       최초html,css문서를 해독하는 출력화면에 맞춰 최소,최대 1배율을 유지
+                 user-scalable=no      모바일 환경에서 화면 확대,축소 기능을 사용하지 않겠다.
+        -->
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+
+
+        <!--5. 브라우저 상단탭에 출력될 사이트 타이틀-->
+        <title>문화재청 경복궁</title>
+
+        <!--6. 외부 CSS연동-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/sub_style.css">
+
+
+
+        <!--6.2.파비콘(브라우저 상단탭 타이틀 앞에 적용되는 아이콘)
+        파비콘이란 웹사이트 또는 웹 페이지를 대표하기 위해 웹 브라우저에서 사용되는 16x16 픽셀의 작은 이미지입니다.
+        즐겨찾기 아이콘(favorite icon)의 줄임말로 주로 웹 브라우저 상단에 있는 탭에 표시됩니다.
+
+        ICO
+        Microsoft에서 개발한 파일 형식인 ICO는 파비콘의 기존 파일 형식이었습니다.
+        ICO는 모든 브라우저에서 지원하며 파일 하나가 여러 가지 크기의 이미지를 포함할 수 있습니다.
+
+        PNG: PNG는 웹사이트 제작자들에게 아주 익숙한 파일 형식이기 때문에 파비콘의 파일 형식으로 자주 사용됩니다.
+        만들기 쉬운 파일 형식이며, 일반적으로 이미지 및 파비콘을 고화질로 전송합니다.
+        PNG 파일은 가볍다는 이점 또한 가지고 있는데요. 이는 파일들이 빠르게 로드된다는 것을 의미합니다.
+
+
+        SVG
+        SVG 파일은 가볍기로 유명합니다.
+        사이트의 성능을 저하시키지 않으면서 고화질 이미지를 전송할 수 있습니다.
+        과거에는 브라우저 호환성 문제로 파비콘의 SVG 사용이 제한되었지만 점점 변화되고 있습니다.
+        ※https://www.adobe.com/kr/creativecloud/file-types/image/vector/svg-file.html
+        -->
+        <link rel="shortcut icon" href="images/test.png">
+
+        <!--7. 외부js(jQuery)압축파일 연동CDN-->
+        <script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
+        <script src="js/motion.js"></script>
+    </head>
+
+    <body class="sub_4_1_bg">
+        <!--1. 전체 헤더(검정배경)-->
+        <header id="header">
+
+            <!--2. 전체 헤더(하얀색 배경)-->
+            <div class="header_wrap">
+
+                <!--3. 전체 헤더(가운데 정렬)-->
+                <div class="header_inner">
+
+                    <h1><a href="index.html"><img src="images/logo_img.png" alt="경복궁"></a></h1>
+                    <p class="nav_open_btn"><button><img src="images/nav_open_btn.png" alt="메뉴열람"></button></p>
+                    <nav>
+                        <p class="nav_close_btn"><button><img src="images/nav_close_btn.png" alt="메뉴닫힘"></button></p>
+                        <ul class="gnb">
+                            <li>
+                                <h2><a href="sub1_1.html">관람안내</a></h2>
+                                <ul>
+                                    <li><a href="sub1_1.html">관람시간 및 규정</a></li>
+                                    <li><a href="sub1_2.html">관람시간 및 요금</a></li>
+                                    <li><a href="sub1_3.html">해설안내</a></li>
+                                    <li><a href="sub1_4.html">오시는 길</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub2_1.html">관람예약/신청</a></h2>
+                                <ul>
+                                    <li><a href="sub2_1.html">경회루 특별관람 예약</a></li>
+                                    <li><a href="sub2_2.html">칠궁 단체해설 예약</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub3_1.html">참여마당</a></h2>
+                                <ul>
+                                    <li><a href="sub3_1.html">자주하는 질문</a></li>
+                                    <li><a href="https://www.cha.go.kr/html/HtmlPage.do?pg=/minwon/minwon_guide.jsp&mn=NS_02_01_01" target="_blank">민원신청</a></li>                                    
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub4_1.html">행사</a></h2>
+                                <ul>
+                                    <li><a href="sub4_1.html">수문장교대의식</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub5_1.html">자료마당</a></h2>
+                                <ul>
+                                    <li><a href="sub5_1.html">경복궁의 역사</a></li>
+                                    <li><a href="sub5_2.html">경복궁 들여다보기</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub6_1.html">미리보는 경복궁</a></h2>
+                                <ul>
+                                    <li><a href="sub6_1.html">경복궁의 사계</a></li>
+                                </ul>
+                            </li> 
+                        </ul>
+                        
+                    </nav>
+
+                </div>
+            </div>
+        </header>
+
+        <section id="sub_container2">
+            <div class="sub_container_wrap">
+
+                <!--서브 공통 비주얼-->
+                <div class="sub_visual sub4_bg">
+
+                    <div class="sub_visual_wrap"> 
+                        <h2>행사</h2> 
+                    </div>
+                </div>
+
+                <!--서브 공통 lnb-->
+                <div class="sub_lnb">
+                    <ul>
+                        <li><a href="sub4_1.html" class="sub_lnb_select">행사</a></li>
+                    </ul>
+                </div>
+
+                <!--서브 공통 h3-->
+                <h3>수문장 교대의식</h3>
+
+                <!--서브 공통 p(간단한 소개글)-->
+                <p>2002년부터 이어져오고 있는 경복궁 수문장 교대의식은 조신시대 왕실 호위문화를<br>
+                    상징하는 대표적인 전통문화행사입니다. </p>
+                    
+                <!--서브 개별-->
+                <div class="sub4_1">
+                    
+                    <!--1. 오늘날의 수문장 소개 구역-->
+                    <div class="gatekeeper">
+                        <div class="gatekeeper_wrap">
+
+                            <div>
+                                <p><strong>오늘날의 수문장을 만나다</strong></p>
+                                <p>
+                                    2002년부터 이어져오고 있는 경복궁 수문장 교대의식은 조선시대 왕실 호위문화를<br>
+                                    상징하는 대표적인 전통문화행사입니다.생생하게 눈앞에서 펼쳐지는 조선의 수문장<br>
+                                    교대의식을 지금 경복궁에서 만나보세요
+                                </p>
+                                <p><a href="#">교대의식 알아보기<b>+</b></a></p>
+                            </div>
+
+                        </div>
+                    </div>
+                     
+                    <!--2. 의식 시간대별 소개 구역-->
+                    <div class="gatekeeper_time">
+                        <h4>관람시간 안내</h4>
+                        <ul>
+                            <li>
+                                <p><img src="images/dontmiss_img1.png" alt="수문장 교대의식 장면"></p>
+                                <p><strong>수문장 교대의식</strong></p>
+                                <p>1일 2회 소요시간 20분</p>
+                                <ul>
+                                    <li>10:00</li>
+                                    <li>14:00</li>
+                                </ul>
+                            </li> 
+    
+                            <li>
+                                <p><img src="images/dontmiss_img2.png" alt="광화문 파수의식 장면"></p>
+                                <p><strong>광화문 파수의식</strong></p>
+                                <p>1일 2회 소요시간 10분</p>
+                                <ul>
+                                    <li>11:00</li>
+                                    <li>13:00</li>
+                                </ul>
+                            </li>
+    
+                            <li>
+                                <p><img src="images/dontmiss_img3.png" alt="수문군 공개 훈련 장면"></p>
+                                <p><strong>수문군 공개 훈련</strong></p>
+                                <p>1일 2회 소요시간 약 15분간</p>
+                                <ul>
+                                    <li>09:35</li>
+                                    <li>13:35</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div> 
+ 
+                    <!--3. 수문장 교대의식 소개구역-->
+                    <div class="gatekeeper_media">
+                        <div>
+                            <p><iframe src="https://www.youtube.com/embed/IlfmTlct6vU"></iframe></p>
+                            <p>수문장 교대의식은 당시의 복식 및 무기 등을 복원하여 조선 전기 군인들의 모습을<br>
+                                생생하게 재현하는 것에 초점을 맞추고 있습니다.</p>
+                            
+                            <!--수문장 교대의식 사진5 -->
+                            <img src="images/sub4_1_gatekeeper_img.png" alt="정통있는 수위방식인 수문장 교대의식의 순간을 포착한 사진들">
+                            <p>조선시대 수문장은 도성 및 궁궐의 각 문을 지키던 관직으로, 당초 수문장은 20인에 불과하였지만 임진왜란 당시에는 430에 이르렀적도 있었습니다.<br>
+                                정통있는 수위방식인 수문장 교대의식 경복궁에서 만나보세요!</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <footer id="footer" class="sub4_footer">
+            <div class="footer_wrap">
+
+                <div>
+                    <ul>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">저작권정책</a></li>
+                        <li><a href="#">개인정보침해신고센터</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="#"><img src="images/sns_img1.png" alt="유튜브 바로가기"></a></li>
+                        <li><a href="#"><img src="images/sns_img2.png" alt="페이스북 바로가기"></a></li>
+                        <li><a href="#"><img src="images/sns_img3.png" alt="인스타 바로가기"></a></li>
+                    </ul>
+
+                    <p><img src="images/logo_img.png" alt="경복궁"></p>
+                </div>
+                   
+                <div>
+                    <p>서울특별시 종로구 사직로 161<br></p>
+                    <p>전화번호02-3700-3900  팩스02-3700-3909</p>
+                    <p>COPYR IGHT 2023 BY GYEONGBOKGUNG. ALL RIGHTS RESERVED.</p>
+                </div>
+
+            </div>
+
+        </footer>
+
+    </body>
+</html>

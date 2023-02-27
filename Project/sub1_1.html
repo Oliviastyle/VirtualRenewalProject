@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <!--1. 문자해독 다국어 지원코드(유니코드)-->
+        <meta charset="utf-8">
+
+        <!--2. 문서의 유형(doctyp html)선언과 함께 호환돠는 브라우저의 호환 모드로써
+            과거 IE버전은 최신 edge 브라우저에 맞춰 호환될 수 있도록 렌더링(현재IE서비스 중단,삭제)-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!--3. 검색엔진에 검색되는 검색키워드-->
+        <meta name="keywords" content="스마트 웹 콘텐츠 UI/UX디자인 & 구현,가상리뉴얼 프로젝트">
+
+        <!--4. 검색엔진에 소개되는 사이트 설명-->
+        <meta name="description" content="업데이트 시기에 맞춰 특정 사이트 가상리뉴얼 프로젝트 진행">
+        
+       
+        <!--4.2. 반응형웹(모바일)필수코드  ★★★★★
+                meta name="viewpoint" 최초html,css문서를 해독하는 출력화면 관련 설명
+                 initial-scale=1,
+                 minimum-scale=1,
+                 maximum-scale=1       최초html,css문서를 해독하는 출력화면에 맞춰 최소,최대 1배율을 유지
+                 user-scalable=no      모바일 환경에서 화면 확대,축소 기능을 사용하지 않겠다.
+        -->
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+
+
+        <!--5. 브라우저 상단탭에 출력될 사이트 타이틀-->
+        <title>문화재청 경복궁</title>
+
+        <!--6. 외부 CSS연동-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/sub_style.css">
+
+
+
+        <!--6.2.파비콘(브라우저 상단탭 타이틀 앞에 적용되는 아이콘)
+        파비콘이란 웹사이트 또는 웹 페이지를 대표하기 위해 웹 브라우저에서 사용되는 16x16 픽셀의 작은 이미지입니다.
+        즐겨찾기 아이콘(favorite icon)의 줄임말로 주로 웹 브라우저 상단에 있는 탭에 표시됩니다.
+
+        ICO
+        Microsoft에서 개발한 파일 형식인 ICO는 파비콘의 기존 파일 형식이었습니다.
+        ICO는 모든 브라우저에서 지원하며 파일 하나가 여러 가지 크기의 이미지를 포함할 수 있습니다.
+
+        PNG: PNG는 웹사이트 제작자들에게 아주 익숙한 파일 형식이기 때문에 파비콘의 파일 형식으로 자주 사용됩니다.
+        만들기 쉬운 파일 형식이며, 일반적으로 이미지 및 파비콘을 고화질로 전송합니다.
+        PNG 파일은 가볍다는 이점 또한 가지고 있는데요. 이는 파일들이 빠르게 로드된다는 것을 의미합니다.
+
+
+        SVG
+        SVG 파일은 가볍기로 유명합니다.
+        사이트의 성능을 저하시키지 않으면서 고화질 이미지를 전송할 수 있습니다.
+        과거에는 브라우저 호환성 문제로 파비콘의 SVG 사용이 제한되었지만 점점 변화되고 있습니다.
+        ※https://www.adobe.com/kr/creativecloud/file-types/image/vector/svg-file.html
+        -->
+        <link rel="shortcut icon" href="images/test.png">
+
+        <!--7. 외부js(jQuery)압축파일 연동CDN-->
+        <script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
+        <script src="js/motion.js"></script>
+    </head>
+
+    <body>
+        <!--1. 전체 헤더(검정배경)-->
+        <header id="header">
+
+            <!--2. 전체 헤더(하얀색 배경)-->
+            <div class="header_wrap">
+
+                <!--3. 전체 헤더(가운데 정렬)-->
+                <div class="header_inner">
+
+                    <h1><a href="index.html"><img src="images/logo_img.png" alt="경복궁"></a></h1>
+
+                    <p class="nav_open_btn"><button><img src="images/nav_open_btn.png" alt="메뉴열람"></button></p>
+                    <nav>
+                        <p class="nav_close_btn"><button><img src="images/nav_close_btn.png" alt="메뉴닫힘"></button></p>
+                        
+                        <ul class="gnb">
+                            <li>
+                                <h2><a href="sub1_1.html">관람안내</a></h2>
+                                <ul>
+                                    <li><a href="sub1_1.html">관람시간 및 규정</a></li>
+                                    <li><a href="sub1_2.html">관람시간 및 요금</a></li>
+                                    <li><a href="sub1_3.html">해설안내</a></li>
+                                    <li><a href="sub1_4.html">오시는 길</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub2_1.html">관람예약/신청</a></h2>
+                                <ul>
+                                    <li><a href="sub2_1.html">경회루 특별관람 예약</a></li>
+                                    <li><a href="sub2_2.html">칠궁 단체해설 예약</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub3_1.html">참여마당</a></h2>
+                                <ul>
+                                    <li><a href="sub3_1.html">자주하는 질문</a></li>
+                                    <li><a href="https://www.cha.go.kr/html/HtmlPage.do?pg=/minwon/minwon_guide.jsp&mn=NS_02_01_01" target="_blank">민원신청</a></li>                                    
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub4_1.html">행사</a></h2>
+                                <ul>
+                                    <li><a href="sub4_1.html">수문장교대의식</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub5_1.html">자료마당</a></h2>
+                                <ul>
+                                    <li><a href="sub5_1.html">경복궁의 역사</a></li>
+                                    <li><a href="sub5_2.html">경복궁 들여다보기</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub6_1.html">미리보는 경복궁</a></h2>
+                                <ul>
+                                    <li><a href="sub6_1.html">경복궁의 사계</a></li>
+                                </ul>
+                            </li> 
+                        </ul>
+                        
+                    </nav>
+
+                </div>
+            </div>
+        </header>
+
+        <section id="sub_container">
+            <div class="sub_container_wrap">
+
+                <!--서브 공통 비주얼-->
+                <div class="sub_visual sub1_bg">
+
+                    <div class="sub_visual_wrap"> 
+                        <h2>관람안내</h2> 
+                    </div>
+                </div>
+
+                <!--서브 공통 lnb-->
+                <div class="sub_lnb">
+                    <ul>
+                        <li><a href="sub1_1.html" class="sub_lnb_select">관람시간 및 규정</a></li>
+                        <li><a href="sub1_2.html">관람시간 및 요금</a></li>
+                        <li><a href="sub1_3.html">해설안내</a></li>
+                        <li><a href="sub1_4.html">오시는 길</a></li>
+                    </ul>
+                </div>
+
+                <!--서브 공통 h3-->
+                <h3>경복궁 관람규칙 및 규정</h3>
+
+                <!--서브 개별-->
+                <div class="sub1_1">
+                    <p>'함께 배려하면 기분좋은 관람'</p>
+                    <p>경복궁 방문하시는 모든 분들께서 사전에 관람 규칙 확인을 통해 모든 분들이 기분좋게 관람할 수 있게 협조하므로써 '함께 배려하면 기분좋은 관람'을 실현하고자 합니다.</p>
+
+                    <!--3-1. 궁능관람 훈령 구역(파란색 배경 부분)-->
+                    <div class="sub1_1_rules">
+                        <p>“ 궁·능 관람 등에 관한 규정(개정 2022.9.1. 문화재청 궁능유적본부 훈령 제31호)<br>
+                            문화재 보존·관리 등을 위하여 다음 각 호 중 어느 하나의 해당하는 자에 대하여 관람중지, 관련 물품 보관 또는 입장제한 등의 필요한 조치를 취할 수 있다.”
+                        </p>
+                    </div>
+
+                    <div class="sub1_1_inner">
+                        <ul>
+                            <li>1. 인화물질 및 무기류(총포, 화약, 도검류 등) 등 위험물 소지자</li>
+
+                            <li>2. 주류, 각종 야영용품(텐트, 돗자리, 그늘막 등) 및 취사도구 소지자</li>
+                            
+                        
+                            <li>3. 음식물 및 도시락 등을 섭취하는 자</li>
+                        
+                            <li>4. 반려동물과 함께 들어오는 자<br>
+                                   (다만 장애인복지법 제2조에서 정한 장애인과 함께 들어오는 장애인 보조견은 예외로 한다. <br>
+                                   이 경우 ‘장애인 보조견’이라 함은 장애인복지법 제40조 제2항의 ‘장애인 보조견 표지’를 붙인 ‘장애인 보조견’을 말한다.)</li>
+                        
+                            <li>5. 운동·놀이기구, 악기, 확성기 및 다른 사람의 관람 또는 문화재의 보존·관리에 지장을 줄 우려가 있는 물건 소지자</li>
+                    
+                            <li>6. 음주, 복장, 무속행위, 방언, 사사로운 제사행위, 종교집회, 고성방가, 풍기문란 및 기타 부적절한 행위로 다른 사람의 관람 또는<br>
+                                   문화재 보존·관리에 지장을 줄 우려가 있는 자</li>
+                        
+                            <li>7. 정당한 사유 없이 관람규정이나 직원의 안내에 따르지 않는 자</li>
+                        
+                            <li>8. 「감염병의 예방 및 관리에 관한 법률」제2조에 명시된 법정 감염병 감염자 또는 감염 의심 증상의 발현으로 다른 관람객의 건강과 안전에 영향을 미칠 수 있는 자</li>
+                        
+                            <li>9. 경복궁 경내 전 지역은 금연구역으로 하며, 궁능유적기관의 장은 흡연자에 대해 관람중지, 퇴장 등 필요한 조치를 취할 수 있다.</li>
+                        </ul>
+
+                        <!--3-2.궁능관람 규정 PDF파일 다운로드 구역-->
+                        <div class="sub1_1_pdf">
+                            <a href="#">
+                                <p>궁·능 관람 등에 관한 규정</p>
+                                <p><img src="images/pdf.png" alt="궁·능 관람 등에 관한 규정 다운로드 받기"></p>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="footer_wrap">
+
+                <div>
+                    <ul>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">저작권정책</a></li>
+                        <li><a href="#">개인정보침해신고센터</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="#"><img src="images/sns_img1.png" alt="유튜브 바로가기"></a></li>
+                        <li><a href="#"><img src="images/sns_img2.png" alt="페이스북 바로가기"></a></li>
+                        <li><a href="#"><img src="images/sns_img3.png" alt="인스타 바로가기"></a></li>
+                    </ul>
+
+                    <p><img src="images/logo_img.png" alt="경복궁"></p>
+                </div>
+                   
+                <div>
+                    <p>서울특별시 종로구 사직로 161<br></p>
+                    <p>전화번호02-3700-3900  팩스02-3700-3909</p>
+                    <p>COPYR IGHT 2023 BY GYEONGBOKGUNG. ALL RIGHTS RESERVED.</p>
+                </div>
+
+            </div>
+
+            </div>
+        </footer>
+
+    </body>
+</html>

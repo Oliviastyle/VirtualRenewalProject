@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <!--1. 문자해독 다국어 지원코드(유니코드)-->
+        <meta charset="utf-8">
+
+        <!--2. 문서의 유형(doctyp html)선언과 함께 호환돠는 브라우저의 호환 모드로써
+            과거 IE버전은 최신 edge 브라우저에 맞춰 호환될 수 있도록 렌더링(현재IE서비스 중단,삭제)-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!--3. 검색엔진에 검색되는 검색키워드-->
+        <meta name="keywords" content="스마트 웹 콘텐츠 UI/UX디자인 & 구현,가상리뉴얼 프로젝트">
+
+        <!--4. 검색엔진에 소개되는 사이트 설명-->
+        <meta name="description" content="업데이트 시기에 맞춰 특정 사이트 가상리뉴얼 프로젝트 진행">
+        
+       
+        <!--4.2. 반응형웹(모바일)필수코드  ★★★★★
+                meta name="viewpoint" 최초html,css문서를 해독하는 출력화면 관련 설명
+                 initial-scale=1,
+                 minimum-scale=1,
+                 maximum-scale=1       최초html,css문서를 해독하는 출력화면에 맞춰 최소,최대 1배율을 유지
+                 user-scalable=no      모바일 환경에서 화면 확대,축소 기능을 사용하지 않겠다.
+        -->
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+
+
+        <!--5. 브라우저 상단탭에 출력될 사이트 타이틀-->
+        <title>문화재청 경복궁</title>
+
+        <!--6. 외부 CSS연동-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/sub_style.css">
+
+
+
+        <!--6.2.파비콘(브라우저 상단탭 타이틀 앞에 적용되는 아이콘)
+        파비콘이란 웹사이트 또는 웹 페이지를 대표하기 위해 웹 브라우저에서 사용되는 16x16 픽셀의 작은 이미지입니다.
+        즐겨찾기 아이콘(favorite icon)의 줄임말로 주로 웹 브라우저 상단에 있는 탭에 표시됩니다.
+
+        ICO
+        Microsoft에서 개발한 파일 형식인 ICO는 파비콘의 기존 파일 형식이었습니다.
+        ICO는 모든 브라우저에서 지원하며 파일 하나가 여러 가지 크기의 이미지를 포함할 수 있습니다.
+
+        PNG: PNG는 웹사이트 제작자들에게 아주 익숙한 파일 형식이기 때문에 파비콘의 파일 형식으로 자주 사용됩니다.
+        만들기 쉬운 파일 형식이며, 일반적으로 이미지 및 파비콘을 고화질로 전송합니다.
+        PNG 파일은 가볍다는 이점 또한 가지고 있는데요. 이는 파일들이 빠르게 로드된다는 것을 의미합니다.
+
+
+        SVG
+        SVG 파일은 가볍기로 유명합니다.
+        사이트의 성능을 저하시키지 않으면서 고화질 이미지를 전송할 수 있습니다.
+        과거에는 브라우저 호환성 문제로 파비콘의 SVG 사용이 제한되었지만 점점 변화되고 있습니다.
+        ※https://www.adobe.com/kr/creativecloud/file-types/image/vector/svg-file.html
+        -->
+        <link rel="shortcut icon" href="images/test.png">
+
+        <!--7. 외부js(jQuery)압축파일 연동CDN-->
+        <script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
+        <script src="js/motion.js"></script>
+    </head>
+
+    <body>
+        <!--1. 전체 헤더(검정배경)-->
+        <header id="header">
+
+            <!--2. 전체 헤더(하얀색 배경)-->
+            <div class="header_wrap">
+
+                <!--3. 전체 헤더(가운데 정렬)-->
+                <div class="header_inner">
+
+                    <h1><a href="index.html"><img src="images/logo_img.png" alt="경복궁"></a></h1>
+                    <p class="nav_open_btn"><button><img src="images/nav_open_btn.png" alt="메뉴열람"></button></p>
+                    <nav>
+                        <p class="nav_close_btn"><button><img src="images/nav_close_btn.png" alt="메뉴닫힘"></button></p>
+                        <ul class="gnb">
+                            <li>
+                                <h2><a href="sub1_1.html">관람안내</a></h2>
+                                <ul>
+                                    <li><a href="sub1_1.html">관람시간 및 규정</a></li>
+                                    <li><a href="sub1_2.html">관람시간 및 요금</a></li>
+                                    <li><a href="sub1_3.html">해설안내</a></li>
+                                    <li><a href="sub1_4.html">오시는 길</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub2_1.html">관람예약/신청</a></h2>
+                                <ul>
+                                    <li><a href="sub2_1.html">경회루 특별관람 예약</a></li>
+                                    <li><a href="sub2_2.html">칠궁 단체해설 예약</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub3_1.html">참여마당</a></h2>
+                                <ul>
+                                    <li><a href="sub3_1.html">자주하는 질문</a></li>
+                                    <li><a href="https://www.cha.go.kr/html/HtmlPage.do?pg=/minwon/minwon_guide.jsp&mn=NS_02_01_01" target="_blank">민원신청</a></li>                                    
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub4_1.html">행사</a></h2>
+                                <ul>
+                                    <li><a href="sub4_1.html">수문장교대의식</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub5_1.html">자료마당</a></h2>
+                                <ul>
+                                    <li><a href="sub5_1.html">경복궁의 역사</a></li>
+                                    <li><a href="sub5_2.html">경복궁 들여다보기</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub6_1.html">미리보는 경복궁</a></h2>
+                                <ul>
+                                    <li><a href="sub6_1.html">경복궁의 사계</a></li>
+                                </ul>
+                            </li> 
+                        </ul>
+                        
+                    </nav>
+
+                </div>
+            </div>
+        </header>
+
+        <section id="sub_container">
+            <div class="sub_container_wrap">
+
+                <!--서브 공통 비주얼-->
+                <div class="sub_visual sub5_bg">
+
+                    <div class="sub_visual_wrap"> 
+                        <h2>자료마당</h2> 
+                    </div>
+                </div>
+
+                <!--서브 공통 lnb-->
+                <div class="sub_lnb">
+                    <ul>
+                        <li><a href="sub5_1.html" class="sub_lnb_select">경복궁의 역사</a></li>
+                        <li><a href="sub5_2.html">경복궁 들여다보기</a></li>
+                    </ul>
+                </div>
+
+                <!--서브 공통 h3-->
+                <h3>경복궁의 역사</h3>
+
+                <!--서브 공통 p(간단한 소개글)-->
+                <p>태조 이성계는 조선을 세운 뒤, 1394년에 도읍지를 한양으로 옮기고 북악산 아래에 경복궁을 지었습니다.<br>
+                조선최고의 법궁이자 가장 중요한 궁궐, 경복궁의 역사를 소개합니다.</p>
+
+                <!--서브 개별-->
+                <div class="sub5_1">
+
+                    <!--경복궁의 역사 소개구역-->
+                    <div class="sub5_1_wrap">
+                        
+                        <div class="sub5_1_intro_01">
+                            <div class="sub5_1_intro_01_wrap">
+                                <div>
+                                    <p><strong>조선의 으뜸 궁궐</strong></p>
+                                    <p>
+                                        경복궁은 조선 왕조 제일의 법궁입니다.북으로 북악산을 기대어 자리 잡았고<br>
+                                        정문인 광화문 앞으로는 넓은 육조거리(지금의 세종로)가 펼쳐져, 왕도인 한양<br>
+                                        (서울) 도시 계획의 중심이기도 합니다.1395년 태조 이성계가 창건하였고,<br>
+                                        1592년 임진 왜란으로 불타 없어졌다가, 고종 때인 1867년 중건 되었습니다.<br>
+                                        흥선대원군이 주도한 중건된 경복궁은 500여 동의 건물들이 미로같이 빼곡히<br>
+                                        들어선 웅장한 모습 이었습니다.
+                                    </p>
+                                    <p>
+                                        궁궐 안에는 왕과 관리들의 정무 시설, 왕족들의 생활 공간, 휴식을 위한 후원<br>
+                                        공간이 조성되었습니다. 또한 왕비의 중궁, 세자의 동궁, 고종이 만든 건청궁 등<br>
+                                        궁궐안에 다시 여러 작은 궁들이 복잡하게 모인 곳이기도 합니다. 그러나 일제<br>
+                                        강점기에 거의 대부분의 건물들을 철거하여 근정전 등 극히 일부 중심 건물만<br>
+                                        남았고, 조 선 총독부 청사를 지어 궁궐 자체를 가려버렸습니다.
+                                    </p> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sub5_1_intro_02">
+                            <div class="sub5_1_intro_02_wrap">
+                                <div>
+                                    <p><strong>변화와 통일의 아름다움</strong></p>
+                                    <p>
+                                        다행히 1990년부터 본격적인 복원 사업이 추진되어 총독부 건물을<br>
+                                        철거하고 흥례문 일원을 복원하였으며, 왕과 왕비의 침전, 동궁,<br>
+                                        건청궁, 태원전 일원의 모습을 되찾고 있습니다.
+                                    </p>
+                                    <p>
+                                        광화문 - 흥례문 - 근정문 - 근정전 - 사정전 - 강녕전 - 교태전을<br>
+                                        잇는 중심 부분은 궁궐의 핵심 공간이며, 기하학적 질서에 따라<br>
+                                        대칭적으로 건축 되었습니다. 그러나 중심부를 제외한 건축물들은<br>
+                                        비대칭적으로 배치되어 변화와 통일의 아름다움을 함께 갖추었습니다.<br>
+                                        수도 서울의 중심이고 조선의 으뜸 궁궐인 경복궁에서 격조 높고<br>
+                                        품위 있는 왕실 문화의 진수를 맛보시기 바랍니다.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div> 
+
+                    <!--연혁 구역-->
+                    <div class="sub5_1_history_list">
+                        <div class="sub5_1_history_list_wrap">
+                            <!--연혁1 리스트-->
+                            <ol>
+                                <li>
+                                    <p><strong>1300년대 경복궁의 창건</strong></p>
+                                    <ol>
+                                        <li>태조  1년(1392) 조선 개국</li>
+                                        <li>태조  3년(1394) 신도궁궐조성도감 설치, 개경에서 한양으로 천도</li>
+                                        <li>태조  4년(1395) 종묘·사직 그리고 경복궁 창건</li>
+                                        <li>태조  5년(1396) 경복궁 궁성 축조</li>
+                                    </ol>
+                                </li>
+
+                                <li>
+                                    <p><strong>1400 법궁 체제 확립</strong></p>
+                                    <ol>
+                                        <li>태종  12년(1412) 경회루를 고쳐 지음</li>
+                                        <li>세종  9년(1427) 동궁 자선당 건립</li>
+                                        <li>세종  11년(1429) 사정전과 경회루 다시 지음</li>
+                                        <li>세종  13년(1431) 광화문을 고쳐 지음</li>
+                                        <li>세종  14년(1432) 문소전을 새로 지음</li>
+                                        <li>세종  15년(1433) 신무문 새로 지음. 강녕전 고쳐 지음</li>
+                                        <li>세종  16년(1434) 광화문에 새 종 설치. 보루각 새로 지음(자격루 설치).융문루·융무루 수리</li>
+                                        <li>세종  20년(1438) 흠경각 새로 지음(옥루기륜 설치)</li>
+                                        <li>세종  25년(1443) 계조당·교태전 새로 지음</li>
+                                        <li>세조  2년(1456) 취로정 새로 지음</li>
+                                        <li>성종  5년(1474) 근정전에 청기와 올림</li>
+                                    </ol>
+                                </li>
+
+                                <li>
+                                    <p><strong>1500년대 화재  및 임진왜란으로 경복궁 소실</strong></p>
+                                    <ol>
+                                        <li>중종  38년(1543) 동궁 화재로 인해 소실</li>
+                                        <li>명종  8년(1553) 화재로 인해 강녕전, 사정전, 흠경각 등 소실</li>
+                                        <li>선조  25년(1592) 임진왜란으로 경복궁 소실</li>
+                                    </ol>
+                                </li>
+
+                                <li>
+                                    <p><strong>1800년대 대원군 중건과 화재</strong></p>
+                                    <ol>
+                                        <li>고종  2년(1865) 경복궁 중건 시작</li>
+                                        <li>고종  4년(1867) 경복궁 중건 완료. 근정전에서 조하 의식 거행</li>
+                                        <li>고종  5년(1868) 창덕궁에서 경복궁으로 이어</li>
+                                        <li>고종  10년(1873) 경복궁에 건청궁 새로 지음</li> 
+                                        <li>고종  13년(1876) 화재로 인해 830여칸 건물 소실</li>
+                                        <li>고종  25년(1888) 강녕전·교태전·자경전 등 다시 지음</li>
+                                    </ol>
+                                </li>
+
+                            </ol> 
+
+                            <!--연혁2 리스트-->
+                            <ol>
+                                <li>
+                                    <p><strong>1900년대 민족 수난기와 경복궁 복원</strong></p>
+                                    <ol>
+                                        <li>1915년  시정 5년 기념 조선물산공진회 개최. 조선총독부 박물관 건물 준공</li>
+                                        <li>1918년	강녕전, 교태전 등 내전 전각 훼철</li>
+                                        <li>1927년	조선총독부 청사 준공.광화문 이건</li>
+                                        <li>1954년	경복궁 일반공개</li>
+                                        <li>1968년	광화문 복원</li>
+                                        <li>1975년	영추문 복원 및 동정문 건립</li>
+                                        <li>1994년	강녕전·교태전 일곽 복원</li>
+                                        <li>1995년	흠경각 복원, 구 조선총독부 박물관 건물 철거</li>
+                                        <li>1997년	구 조선총독부 청사 철거</li>
+                                        <li>1999년	동궁 복원(자선당·비현각)</li>
+                                    </ol>
+                                </li>
+
+                                <li>
+                                    <p><strong>2000년대 경복궁 복원</strong></p>
+                                    <ol>
+                                        <li>2001년	흥례문·유화문·영제교 복원</li>
+                                        <li>2003년	근정전 귀고주 교체 및 지붕 전면 보수</li>
+                                        <li>2005년	경회루 동편담장 복원, 태원전 일곽 복원</li>
+                                        <li>2006년	건청궁 일곽 복원</li>
+                                        <li>2008년	함화당,집경당 보수 및 주변행각 복원</li>
+                                        <li>2010년	광화문 일곽 복원</li>
+                                        <li>2015년	소주방 일곽 복원</li>
+                                        <li>2018년	흥복전 일곽 복원</li>
+                                        <li>2021년	향원정 보수 및 취향교 복원</li>
+                                        <li>현재	계조당 권역 복원 진행중</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="footer_wrap">
+
+                <div>
+                    <ul>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">저작권정책</a></li>
+                        <li><a href="#">개인정보침해신고센터</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="#"><img src="images/sns_img1.png" alt="유튜브 바로가기"></a></li>
+                        <li><a href="#"><img src="images/sns_img2.png" alt="페이스북 바로가기"></a></li>
+                        <li><a href="#"><img src="images/sns_img3.png" alt="인스타 바로가기"></a></li>
+                    </ul>
+
+                    <p><img src="images/logo_img.png" alt="경복궁"></p>
+                </div>
+                   
+                <div>
+                    <p>서울특별시 종로구 사직로 161<br></p>
+                    <p>전화번호02-3700-3900  팩스02-3700-3909</p>
+                    <p>COPYR IGHT 2023 BY GYEONGBOKGUNG. ALL RIGHTS RESERVED.</p>
+                </div>
+
+            </div>
+        </footer>
+
+    </body>
+</html>

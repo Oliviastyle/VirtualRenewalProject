@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <!--1. 문자해독 다국어 지원코드(유니코드)-->
+        <meta charset="utf-8">
+
+        <!--2. 문서의 유형(doctyp html)선언과 함께 호환돠는 브라우저의 호환 모드로써
+            과거 IE버전은 최신 edge 브라우저에 맞춰 호환될 수 있도록 렌더링(현재IE서비스 중단,삭제)-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!--3. 검색엔진에 검색되는 검색키워드-->
+        <meta name="keywords" content="스마트 웹 콘텐츠 UI/UX디자인 & 구현,가상리뉴얼 프로젝트">
+
+        <!--4. 검색엔진에 소개되는 사이트 설명-->
+        <meta name="description" content="업데이트 시기에 맞춰 특정 사이트 가상리뉴얼 프로젝트 진행">
+        
+       
+        <!--4.2. 반응형웹(모바일)필수코드  ★★★★★
+                meta name="viewpoint" 최초html,css문서를 해독하는 출력화면 관련 설명
+                 initial-scale=1,
+                 minimum-scale=1,
+                 maximum-scale=1       최초html,css문서를 해독하는 출력화면에 맞춰 최소,최대 1배율을 유지
+                 user-scalable=no      모바일 환경에서 화면 확대,축소 기능을 사용하지 않겠다.
+        -->
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+
+
+        <!--5. 브라우저 상단탭에 출력될 사이트 타이틀-->
+        <title>문화재청 경복궁</title>
+
+        <!--6. 외부 CSS연동-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/sub_style.css">
+
+
+
+        <!--6.2.파비콘(브라우저 상단탭 타이틀 앞에 적용되는 아이콘)
+        파비콘이란 웹사이트 또는 웹 페이지를 대표하기 위해 웹 브라우저에서 사용되는 16x16 픽셀의 작은 이미지입니다.
+        즐겨찾기 아이콘(favorite icon)의 줄임말로 주로 웹 브라우저 상단에 있는 탭에 표시됩니다.
+
+        ICO
+        Microsoft에서 개발한 파일 형식인 ICO는 파비콘의 기존 파일 형식이었습니다.
+        ICO는 모든 브라우저에서 지원하며 파일 하나가 여러 가지 크기의 이미지를 포함할 수 있습니다.
+
+        PNG: PNG는 웹사이트 제작자들에게 아주 익숙한 파일 형식이기 때문에 파비콘의 파일 형식으로 자주 사용됩니다.
+        만들기 쉬운 파일 형식이며, 일반적으로 이미지 및 파비콘을 고화질로 전송합니다.
+        PNG 파일은 가볍다는 이점 또한 가지고 있는데요. 이는 파일들이 빠르게 로드된다는 것을 의미합니다.
+
+
+        SVG
+        SVG 파일은 가볍기로 유명합니다.
+        사이트의 성능을 저하시키지 않으면서 고화질 이미지를 전송할 수 있습니다.
+        과거에는 브라우저 호환성 문제로 파비콘의 SVG 사용이 제한되었지만 점점 변화되고 있습니다.
+        ※https://www.adobe.com/kr/creativecloud/file-types/image/vector/svg-file.html
+        -->
+        <link rel="shortcut icon" href="images/test.png">
+
+        <!--7. 외부js(jQuery)압축파일 연동CDN-->
+        <script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
+        <script src="js/motion.js"></script>
+    </head>
+
+    <body>
+        <!--1. 전체 헤더(검정배경)-->
+        <header id="header">
+
+            <!--2. 전체 헤더(하얀색 배경)-->
+            <div class="header_wrap">
+
+                <!--3. 전체 헤더(가운데 정렬)-->
+                <div class="header_inner">
+
+                    <h1><a href="index.html"><img src="images/logo_img.png" alt="경복궁"></a></h1>
+                    <p class="nav_open_btn"><button><img src="images/nav_open_btn.png" alt="메뉴열람"></button></p>
+                    <nav>
+                        <p class="nav_close_btn"><button><img src="images/nav_close_btn.png" alt="메뉴닫힘"></button></p>
+                        <ul class="gnb">
+                            <li>
+                                <h2><a href="sub1_1.html">관람안내</a></h2>
+                                <ul>
+                                    <li><a href="sub1_1.html">관람시간 및 규정</a></li>
+                                    <li><a href="sub1_2.html">관람시간 및 요금</a></li>
+                                    <li><a href="sub1_3.html">해설안내</a></li>
+                                    <li><a href="sub1_4.html">오시는 길</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub2_1.html">관람예약/신청</a></h2>
+                                <ul>
+                                    <li><a href="sub2_1.html">경회루 특별관람 예약</a></li>
+                                    <li><a href="sub2_2.html">칠궁 단체해설 예약</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub3_1.html">참여마당</a></h2>
+                                <ul>
+                                    <li><a href="sub3_1.html">자주하는 질문</a></li>
+                                    <li><a href="https://www.cha.go.kr/html/HtmlPage.do?pg=/minwon/minwon_guide.jsp&mn=NS_02_01_01" target="_blank">민원신청</a></li>                                    
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub4_1.html">행사</a></h2>
+                                <ul>
+                                    <li><a href="sub4_1.html">수문장교대의식</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub5_1.html">자료마당</a></h2>
+                                <ul>
+                                    <li><a href="sub5_1.html">경복궁의 역사</a></li>
+                                    <li><a href="sub5_2.html">경복궁 들여다보기</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub6_1.html">미리보는 경복궁</a></h2>
+                                <ul>
+                                    <li><a href="sub6_1.html">경복궁의 사계</a></li>
+                                </ul>
+                            </li> 
+                        </ul>
+                        
+                    </nav>
+
+                </div>
+            </div>
+        </header>
+
+        <section id="sub_container">
+            <div class="sub_container_wrap">
+
+                <!--서브 공통 비주얼-->
+                <div class="sub_visual sub5_bg">
+
+                    <div class="sub_visual_wrap"> 
+                        <h2>자료마당</h2> 
+                    </div>
+                </div>
+
+                <!--서브 공통 lnb-->
+                <div class="sub_lnb">
+                    <ul>
+                        <li><a href="sub5_1.html">경복궁의 역사</a></li>
+                        <li><a href="sub5_2.html" class="sub_lnb_select">경복궁 들여다보기</a></li>
+                    </ul>
+                </div>
+
+                <!--서브 공통 h3-->
+                <h3>경복궁 들여다보기</h3>
+
+                <!--서브 공통 p(간단한 소개글)-->
+                <p>천년의 역사와 전통이 깃들여 있는 경복궁의 궁성과 문을 소개합니다.</p>
+                
+                <!--서브 개별-->
+                <div class="sub5_2">
+                    
+                    <div class="sub5_2_wrap">
+                        <!--1. 궁성 소개 텍스트 정보-->
+                        <div class="gungseong">
+                            <div class="gungseong_wrap">
+                                <div>
+                                    <p><strong>궁성</strong></p>
+                                    <p>
+                                        궁성은 궁을 둘러싸고 있는 높은 담장을 이른다. 경복궁의 궁성은 1398년(태조7)에 동쪽, 남쪽,<br>
+                                        서쪽이 조성되었으며, 이때 궁성문인 건춘, 광화, 영추문도 세워졌다.
+                                    </p> 
+                                    <p>이 보다 뒤에 북쪽 담장이 완성되고 북문인 신무문도 갖추어졌다. 궁성은 거의 네모난 형태를<br>
+                                        이루고 있고 전면 좌우 끝에는 각루(角樓)인 동십자각과 서십자각이 있다.
+                                    </p> 
+                                    <p>  
+                                        경복궁의 궁성은 임진왜란으로 궁궐  건물이 모두 소실되었을 때에도 일반 백성들로부터<br>
+                                        궁궐터를 보호하는 역할을 하였다. 고종 년간 경복궁 중건 시 궁성이 새 단장을 하게<br>
+                                        되었지만 일제강점기에 앞부분이 헐려 나가고 또 한국전쟁 때 파손되었다.<br>
+                                        현재의 궁성은 그 이후 여러 차례 고쳐 쌓은 것이고,<br>
+                                        일부는 본래 위치보다 안으로 들여 쌓은 상태이다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--2. 광화문 소개 텍스트 정보-->
+                        <div class="gwanghwamun">
+                            <div class="gwanghwamun_wrap">
+                                <div>
+                                    <p><strong>광화문 -  군주에 의한 덕화</strong></p>
+                                    <p>
+                                        광화문은 경복궁의 정문이다. 광화문은 조선의 법궁에 해당하는 궁궐의 정문으로서 다른 궁궐들의<br>
+                                        정문과는 달리 돌로 높은 석축을 쌓고 그 위에 중층구조의 누각을 세워서 마치 성곽의 성문과<br>
+                                        같은 격식으로 장대하게 지어졌다.
+                                    </p>
+                                    <p>
+                                        광화문은 중층으로 된 문루를 받치는 기단석축이 세 개의 홍예문으로 이루어져 있는데,<br>
+                                        중앙의 홍예문으로는 왕이, 좌우의 홍예문으로는 왕세자와 신하들이 출입하였다.<br>
+                                        광화문은 일제강점기에 조선총독부 건물을 지으면서 건춘문 북쪽으로 옮겼다가<br>
+                                        한국전쟁 때 폭격을 맞아 문루가 모두 소실되었다.
+                                    </p>
+                                    <p>
+                                        그 후 1968년에 경복궁 정문의 위치로 다시 옮겼으나 나무를 사용하지 않고 콘크리트<br>
+                                        구조로 복원하는 과정에서 위치 또한 제자리를 찾지 못하였다. 현재의 광화문은<br>
+                                        2010년에 원래의 모습으로 제자리를 찾아서 다시 복원한 것이다.<br>
+                                        또한, 광화문 홍예 개판에는 ‘사령(四靈)’ 인 기린, 봉황, 거북이가 그려져 있는데<br>
+                                        이것은 1968년 광화문 복원시 그려진 것을 현황 모사한 것이다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--3. 건춘문 소개 텍스트 정보-->
+                        <div class="geonchunmun">
+                            <div class="geonchunmun_wrap">
+                                <div>
+                                    <p><strong>건춘문  -  봄을 세우다</strong></p>
+                                    <p>
+                                        건춘문은 궁성의 동쪽 문으로 만물의 기운이 움트는 ‘봄이 시작 된다’라는 뜻을 가지고 있다.<br>
+                                        건춘문은 주로 세자와 동궁 영역에 위치한 각사에서 일하는 신하들이 출입하던 문이다.<br>
+                                        현재의 문은 고종 2년(1865) 경복궁 중건 당시 건립된 것이다. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--4. 영추문 소개 텍스트 정보-->
+                        <div class="yeongchumun">
+                            <div class="yeongchumun_wrap">
+                                <div>
+                                    <p><strong>영추문 -  가을을 맞이한다</strong></p>
+                                    <p>
+                                        경복궁의 서쪽문인 영추문은 ‘가을을 맞이한다’라는 뜻을 가지고 있다.건춘문과 대비되는 개념의<br>
+                                        이름으로 서쪽 방위의 개념에 맞게 지어졌다.이 문은 주로 문무백관이 출입하던 곳으로<br>
+                                        특히 서쪽 궐내각사에 근무하던신하들이 많이 이용하였다. 현재의 문은 1975년에 철근콘크리트<br>
+                                        구조로 복원된 것이다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--5. 신무문 소개 텍스트 정보-->
+                        <div class="sinmumun">
+                            <div class="sinmumun_wrap">
+                                <div>
+                                    <p><strong>신무문 -  ’뛰어난 무용‘ </strong></p>
+                                    <p>
+                                        신무문은 궁성의 북쪽 문으로 북쪽 궁성이 마련되고 나서 세워진 것이다. 신무문이라는<br>
+                                        이름을 얻은 것은 성종 6년(1475)이다. 신무문 쪽은 인적이 드물었으나 신하들의 공훈을<br>
+                                        기록해 놓은 회맹단이 있어 왕이 공신들의 충성을 다짐하는 모임이 있는 회맹제에 참석할<br>
+                                        때에는 이 문을 이용하였다. 
+                                    </p>
+                                    <p>
+                                        또 영조 때에는 숙빈 최씨를 모신 육상궁에 참배하기 위하여 경복궁터를 길로 삼았는데,<br>
+                                        이때 신무문을 자주 이용하였다. 신무문은 건춘문과 규모가 동일하며 현재의 문은 경복궁<br>
+                                        중건 시 건립된 것이다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div> 
+        </section>
+
+        <footer id="footer">
+            <div class="footer_wrap">
+
+                <div>
+                    <ul>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">저작권정책</a></li>
+                        <li><a href="#">개인정보침해신고센터</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="#"><img src="images/sns_img1.png" alt="유튜브 바로가기"></a></li>
+                        <li><a href="#"><img src="images/sns_img2.png" alt="페이스북 바로가기"></a></li>
+                        <li><a href="#"><img src="images/sns_img3.png" alt="인스타 바로가기"></a></li>
+                    </ul>
+
+                    <p><img src="images/logo_img.png" alt="경복궁"></p>
+                </div>
+                   
+                <div>
+                    <p>서울특별시 종로구 사직로 161<br></p>
+                    <p>전화번호02-3700-3900  팩스02-3700-3909</p>
+                    <p>COPYR IGHT 2023 BY GYEONGBOKGUNG. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

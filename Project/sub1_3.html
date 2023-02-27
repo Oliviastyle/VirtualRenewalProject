@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <!--1. 문자해독 다국어 지원코드(유니코드)-->
+        <meta charset="utf-8">
+
+        <!--2. 문서의 유형(doctyp html)선언과 함께 호환돠는 브라우저의 호환 모드로써
+            과거 IE버전은 최신 edge 브라우저에 맞춰 호환될 수 있도록 렌더링(현재IE서비스 중단,삭제)-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!--3. 검색엔진에 검색되는 검색키워드-->
+        <meta name="keywords" content="스마트 웹 콘텐츠 UI/UX디자인 & 구현,가상리뉴얼 프로젝트">
+
+        <!--4. 검색엔진에 소개되는 사이트 설명-->
+        <meta name="description" content="업데이트 시기에 맞춰 특정 사이트 가상리뉴얼 프로젝트 진행">
+        
+       
+        <!--4.2. 반응형웹(모바일)필수코드  ★★★★★
+                meta name="viewpoint" 최초html,css문서를 해독하는 출력화면 관련 설명
+                 initial-scale=1,
+                 minimum-scale=1,
+                 maximum-scale=1       최초html,css문서를 해독하는 출력화면에 맞춰 최소,최대 1배율을 유지
+                 user-scalable=no      모바일 환경에서 화면 확대,축소 기능을 사용하지 않겠다.
+        -->
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+
+
+        <!--5. 브라우저 상단탭에 출력될 사이트 타이틀-->
+        <title>문화재청 경복궁</title>
+
+        <!--6. 외부 CSS연동-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/sub_style.css">
+
+
+
+        <!--6.2.파비콘(브라우저 상단탭 타이틀 앞에 적용되는 아이콘)
+        파비콘이란 웹사이트 또는 웹 페이지를 대표하기 위해 웹 브라우저에서 사용되는 16x16 픽셀의 작은 이미지입니다.
+        즐겨찾기 아이콘(favorite icon)의 줄임말로 주로 웹 브라우저 상단에 있는 탭에 표시됩니다.
+
+        ICO
+        Microsoft에서 개발한 파일 형식인 ICO는 파비콘의 기존 파일 형식이었습니다.
+        ICO는 모든 브라우저에서 지원하며 파일 하나가 여러 가지 크기의 이미지를 포함할 수 있습니다.
+
+        PNG: PNG는 웹사이트 제작자들에게 아주 익숙한 파일 형식이기 때문에 파비콘의 파일 형식으로 자주 사용됩니다.
+        만들기 쉬운 파일 형식이며, 일반적으로 이미지 및 파비콘을 고화질로 전송합니다.
+        PNG 파일은 가볍다는 이점 또한 가지고 있는데요. 이는 파일들이 빠르게 로드된다는 것을 의미합니다.
+
+
+        SVG
+        SVG 파일은 가볍기로 유명합니다.
+        사이트의 성능을 저하시키지 않으면서 고화질 이미지를 전송할 수 있습니다.
+        과거에는 브라우저 호환성 문제로 파비콘의 SVG 사용이 제한되었지만 점점 변화되고 있습니다.
+        ※https://www.adobe.com/kr/creativecloud/file-types/image/vector/svg-file.html
+        -->
+        <link rel="shortcut icon" href="images/test.png">
+
+        <!--7. 외부js(jQuery)압축파일 연동CDN-->
+        <script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
+        <script src="js/motion.js"></script>
+
+    </head>
+
+    <body>
+        <!--1. 전체 헤더(검정배경)-->
+        <header id="header">
+
+            <!--2. 전체 헤더(하얀색 배경)-->
+            <div class="header_wrap">
+
+                <!--3. 전체 헤더(가운데 정렬)-->
+                <div class="header_inner">
+
+                    <h1><a href="index.html"><img src="images/logo_img.png" alt="경복궁"></a></h1>
+                    <p class="nav_open_btn"><button><img src="images/nav_open_btn.png" alt="메뉴열람"></button></p>
+                    <nav>
+                        <p class="nav_close_btn"><button><img src="images/nav_close_btn.png" alt="메뉴닫힘"></button></p>
+                        <ul class="gnb">
+                            <li>
+                                <h2><a href="sub1_1.html">관람안내</a></h2>
+                                <ul>
+                                    <li><a href="sub1_1.html">관람시간 및 규정</a></li>
+                                    <li><a href="sub1_2.html">관람시간 및 요금</a></li>
+                                    <li><a href="sub1_3.html">해설안내</a></li>
+                                    <li><a href="sub1_4.html">오시는 길</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub2_1.html">관람예약/신청</a></h2>
+                                <ul>
+                                    <li><a href="sub2_1.html">경회루 특별관람 예약</a></li>
+                                    <li><a href="sub2_2.html">칠궁 단체해설 예약</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub3_1.html">참여마당</a></h2>
+                                <ul>
+                                    <li><a href="sub3_1.html">자주하는 질문</a></li>
+                                    <li><a href="https://www.cha.go.kr/html/HtmlPage.do?pg=/minwon/minwon_guide.jsp&mn=NS_02_01_01" target="_blank">민원신청</a></li>                                    
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub4_1.html">행사</a></h2>
+                                <ul>
+                                    <li><a href="sub4_1.html">수문장교대의식</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub5_1.html">자료마당</a></h2>
+                                <ul>
+                                    <li><a href="sub5_1.html">경복궁의 역사</a></li>
+                                    <li><a href="sub5_2.html">경복궁 들여다보기</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h2><a href="sub6_1.html">미리보는 경복궁</a></h2>
+                                <ul>
+                                    <li><a href="sub6_1.html">경복궁의 사계</a></li>
+                                </ul>
+                            </li> 
+                        </ul>
+                        
+                    </nav>
+
+                </div>
+            </div>
+        </header>
+
+        <section id="sub_container">
+            <div class="sub_container_wrap">
+
+                <!--서브 공통 비주얼-->
+                <div class="sub_visual sub1_bg">
+
+                    <div class="sub_visual_wrap"> 
+                        <h2>관람안내</h2> 
+                    </div>
+                </div>
+
+                <!--서브 공통 lnb-->
+                <div class="sub_lnb">
+                    <ul>
+                        <li><a href="sub1_1.html">관람시간 및 규정</a></li>
+                        <li><a href="sub1_2.html">관람시간 및 요금</a></li>
+                        <li><a href="sub1_3.html" class="sub_lnb_select">해설안내</a></li>
+                        <li><a href="sub1_4.html">오시는 길</a></li>
+                    </ul>
+                </div>
+
+                <!--서브 공통 h3-->
+                <h3>해설안내</h3>
+
+                <!--서브 개별-->
+                <div class="sub1_3">
+
+                    <!--1.경복궁-->
+                    <div class="gb_guide">
+                        <div class="gb_guide_inner">
+                            <h3>경복궁</h3>
+                            <div>
+                                <h4>경복궁 정규해설</h4>
+                                <!--경복궁해설: 한국어-->
+                                <div class="korean">
+
+                                    <p>해설 시간표</p>
+                                    
+                                    <p>1. 한국어 해설</p>
+                                    
+                                    <table>
+                                        <thead>
+                                            <tr> <th>언어</th> <th colspan="2">한국어</th> </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr> <td rowspan="2">요일시간</td> <td>월 수 목</td> <td>금 토 일</td> </tr>
+                                            <tr> 
+                                                
+                                                <td>
+                                                    10:00 / 10:30 / 11:00 / 13:00<br>
+                                                    13:30 / 14:00 / 14:30 / 15:00<br>
+                                                    16:00
+                                                </td> 
+                                                <td>
+                                                    10:00 / 10:30 /  11:00 /11:30<br>
+                                                    12:00 / 12:30 / 13:00 / 13:30<br>
+                                                    14:00 /  14:30 / 15:00 / 16:00<br>
+                                                </td> 
+                                            </tr>
+                                            <tr> 
+                                                <td>해설기관</td> 
+                                                <td colspan="2">
+
+                                                    ① 경복궁 관리소(월,수,목 모든 시간)<br>
+                                                       <span>※금 10:30 / 13:30 / 14:30 / 16:00</span><br>
+                                                    ② 궁궐지킴(토, 일 16:00)<br>
+                                                    ③ 궁궐길라잡이<br>
+
+                                                </td> 
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                
+                                </div>
+
+                                <!--경복궁해설: 외국어-->
+                                <div class="foreign">
+                                    <p>2. 외국어 해설</p>
+                                    <table>
+                                        <thead>
+                                            <tr>  
+                                                <th>언어</th>
+                                                <th>영어</th>
+                                                <th>일본</th>
+                                                <th>중국</th>
+                                                <th>인도<br>네시아</th>
+                                                <th>베트남</th>
+                                                <th>스페인</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr> <td rowspan="2">요일시간</td> <td colspan="3">수~월</td> <td colspan="3">금~토</td> </tr>
+                                            
+                                            <tr>
+                                                <td>
+                                                    11:00<br>
+                                                    13:30<br>
+                                                    15:30<br>
+                                                </td>
+                                                <td>
+                                                    10:00<br>
+                                                    14:30<br>
+                                                </td>
+                                                <td>
+                                                    10:30<br>
+                                                    15:00<br>
+                                                </td>
+                                                <td>14:30</td>
+                                                <td>10:30</td>
+                                                <td>
+                                                    10:30<br>
+                                                    15:00<br>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!--경복궁 관람방법-->
+                                <div class="gb_sightseeing">
+                                    <p>관람방법</p>
+                                    <ul>
+                                        <li>시작하는 곳 : 경복궁 안내실 앞(흥례문 안쪽)</li>
+                                        <li>소요시간 : 1시간-1시간 30분</li>
+                                        <li><b>동절기간 11~2월 마지막 해설시간은 16:00에서 15:30으로 변경됩니다. </b></li>
+                                        <li>경복궁 정규 해설은 해설사의 스토리텔링을 들으며 경복궁의 주요한 전각을 둘러보는 것입니다.</li>
+                                        <li>코로나19 확산방지를 위하여 다음과 같이 운영하오니 양해해 주시기 바랍니다.</li>
+                                        <li>해설관람 참여시 마스크를 상시 착용해 주십시오.</li>
+                                        <li>‘생활 속 거리두기’를 유지하기 위하여 관람 동선은 유동적으로 변경될 수 있습니다.</li>
+                                        <li>정규해설은 불특정 다수의 관람객을 대상으로 이루어지므로 이해가 부족한 초등학교 저학년 및 미취학 아동단체는 참여하실수 없습니다.</li>
+                                        <li>정규해설은 출발시간을 엄수하며 출발시간이 지나면 참여하실 수 없습니다.</li>
+                                        <li>문화재 해설 중 동영상 촬영 및 녹음은 해당 문화재 해설사의 사전 승인 없이는 불가능합니다.</li>
+                                        <li>우천 시에도 진행합니다.</li>
+                                        <li>위 사항은 외국어 해설에도 적용됩니다.</li>
+                                        <li>외국어 안내해설시, 내국인은 참여 불가능합니다. 단, 외국인 동반한 내국인은 참여 가능합니다.</li>
+                                        <li><b>10인 미만 개인 관람객은 별도의 예약 없이 해설에 참여하실 수 있습니다.</b></li>
+                                        <li>
+                                            10인 이상의 단체는 예약이 필요하며 한 회당 30명까지 예약이 가능합니다. 한국어 단체해설예약
+                                            <a href="https://www.royalpalace.go.kr/content/guide/guide21.asp">한국어 단체해설예약</a>
+                                        </li>
+                                        <li>단체해설예약은 별도해설이 아니며, 예약자와 개별적으로 참여하는 관람객이 함께 해설을 받습니다.</li>
+                                        <br>
+                                        <li>
+                                            문의 사항<br>
+                                            -경복궁안내실 : 02-3700-3900, -3904, -3905<br>
+                                            -중국어 여행사 예약 전용 : 02-723-4268(한국여행업협회)<br>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            자원봉사단체 연락처 및 홈페이지<br>
+                                            -우리궁궐지킴이 02-723-4206<br>
+                                            -궁궐길라잡이 02-735-5733<br>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--경복궁 해설 시작하는 곳-->
+                        <div class="gb_meeting_point">
+                            <p>해설 시작하는 곳</p>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1581.0193813018682!2d126.97604727693461!3d37.57770491427755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca33336f8ddc5%3A0xdb1010546cfd9dbc!2z6rK967O16raBIOq3vOygleusuA!5e0!3m2!1sko!2skr!4v1673403614840!5m2!1sko!2skr"></iframe>
+                        </div>
+                    </div>
+
+                    <!--2.경회루-->
+                    <div class="gh_guide">
+                        <div class="gh_guide_inner">
+                            <h3>경회루</h3>
+                            <h4>경회루 특별관람</h4>
+                            <p>경회루 특별관람 시간표</p>
+                            <!--특별관람 시간표-->
+                            <table>
+                                <thead>
+                                    <tr> <th>언어</th> <th colspan="4">한국어</th> </tr>
+                                </thead>
+                                <tbody>
+                                    <tr> <td>시간</td> <td>10:00</td> <td>11:00</td> <td>14:00</td> <td>16:00</td> </tr>
+                                    <tr> <td>요일</td> <td colspan="4">매일 (휴궁일 화요일 제외)</td> </tr>
+                                </tbody>
+                            </table>
+
+                            <!--관람방법-->
+                            <div class="gh_sightseeing">
+                                <p>관람방법</p>
+                                <ul>
+                                    <li>시작하는 곳 : 경회루 옆 함홍문</li>
+                                    <li>소요시간 : 40분</li>
+                                    <li>
+                                        전원 선착순 예약제 회당 20명까지 (한국인 15명, 외국인 5명) / 1인당 2명까지 예약 가능합니다.
+                                        <b>※ 안전거리 확보를 위해 단체예약은 받지 않습니다.</b>
+                                    </li>
+                                    <li>초등학생 이상은 1인에 해당합니다.</li>
+                                    <li>불특정 다수의 관람객을 대상으로 이루어지므로 이해가 부족한 초등학교 저학년 및 미취학 아동단체는 참여하실수 없습니다.</lid>
+                                    <li>관람희망일 7일 전, 오전 10시부터 하루 전까지 선착순으로 마감됩니다.</li>
+                                    <li>해설사의 인솔 하에 관람하며, <b>한국어로만 해설</b>합니다.</li>
+                                    <li>우천 시에도 진행합니다. (단, 누각 위로 올라가는 것이 문화재 보호 상 위험하다고 판단되는 경우사전예고 없이 중단될 수 있습니다.)</li>
+                                    <li>마스크 착용 및 관람객 간의 거리 유지 등 방역수칙을 준수해주시기 바랍니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--경회루 해설 시작하는 곳-->
+                        <div class="gh_meeting_point">
+                            <p>해설 시작하는 곳</p>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.952085769903!2d126.97370174255406!3d37.57974594177887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2c1953f1a05%3A0xa56385b87edea672!2z6rK967O16raBIOqyve2ajOujqA!5e0!3m2!1sko!2skr!4v1673404177291!5m2!1sko!2skr"></iframe>
+                    
+                        </div>
+                    </div>
+
+                    <!--3.칠궁-->
+                    <div class="seven_guide">
+                        <div class="seven_guide_inner">
+                            <h3>칠궁</h3>
+                            <h4>칠궁 정규해설</h4>
+                            <p>칠궁 정규해설 시간표</p>
+
+                            <!--칠궁 정규해설 시간표-->
+                            <table>
+                                <thead>
+                                    <tr> <th>언어</th> <th colspan="5">한국어</th> </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr> <td>요일</td> <td colspan="5">매일 (휴궁일 화요일 제외)</td></tr>
+                                    <tr> <td>시간</td> <td>09:30</td> <td>11:00</td> <td>13:00</td> <td>14:30</td> <td>16:00</td> </tr>
+                                </tbody>
+                            </table>
+
+                            <!--관람방법 및 주의사항-->
+                            <div class="seven_sightseeing">
+                                <p>관람방법 및 주의사항</p>
+                                <ul>
+                                    <li>한국어 해설만 진행</li>
+                                    <li>소요시간 : 50분</li>
+                                    <li>준수사항 : 마스크 착용 및 안전거리 유지</li>
+                                    <li>10인 이상의 단체는 예약이 필요하며 한 회당 30명까지 예약이 가능합니다.</li>
+                                    <br>
+                                    <li>
+                                        <ul>
+                                            <p>주의사항</p>
+                                            <b>칠궁 주차장은 별도로 없으니 대중교통을 이용하시기 바랍니다.</b><br>
+                                            <b>매주 화요일은 정기 휴궁일(休宮日)입니다.</b> ※ 휴궁일이 공휴일(대체공휴일 포함)과 겹칠 경우 개방하며,
+                                                이 경우 개방한 공휴일 다음의 첫 번째 비공휴일을 휴궁일로 합니다.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <br>
+                                    <li>칠궁 관람 문의 : 02-734-7720</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!--칠궁 해설 시작하는 곳-->
+                        <div class="seven_meeting_point">
+                            <p>해설 시작하는 곳</p>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.6934495537357!2d126.97098706371814!3d37.58583563078332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3affe8c2651%3A0x7fa28c2cd0be69a1!2z7Lmg6raB!5e0!3m2!1sko!2skr!4v1673404651977!5m2!1sko!2skr"></iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="footer_wrap">
+
+                <div>
+                    <ul>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">저작권정책</a></li>
+                        <li><a href="#">개인정보침해신고센터</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="#"><img src="images/sns_img1.png" alt="유튜브 바로가기"></a></li>
+                        <li><a href="#"><img src="images/sns_img2.png" alt="페이스북 바로가기"></a></li>
+                        <li><a href="#"><img src="images/sns_img3.png" alt="인스타 바로가기"></a></li>
+                    </ul>
+
+                    <p><img src="images/logo_img.png" alt="경복궁"></p>
+                </div>
+                   
+                <div>
+                    <p>서울특별시 종로구 사직로 161<br></p>
+                    <p>전화번호02-3700-3900  팩스02-3700-3909</p>
+                    <p>COPYR IGHT 2023 BY GYEONGBOKGUNG. ALL RIGHTS RESERVED.</p>
+                </div>
+
+            </div>
+
+            </div>
+        </footer>
+
+    </body>
+</html>
